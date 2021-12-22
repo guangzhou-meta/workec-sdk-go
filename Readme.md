@@ -30,10 +30,10 @@ var apiConfig = api.NewConfig(appId, appSecret, corpId)
 
 func main() {
 	apiConfig.
-		SetAppId(appId).
-		SetAppSecret(appSecret).
-		SetCorpId(corpId).
-		SetServerBaseUrl(common.ServerBaseUrlV2)
+		SetAppId(appId). // 设置EC服务AppId
+		SetAppSecret(appSecret). // 设置EC服务AppSecret
+		SetCorpId(corpId). // 设置EC服务企业Id
+		SetServerBaseUrl(common.ServerBaseUrlV2) // 设置EC服务基础地址
 }
 ```
 
@@ -66,3 +66,12 @@ func main() {
 	fmt.Println(res)
 }
 ```
+
+## Api风格
+例子:
+
+| Api路由           | Api名称          |
+|:----------------|:---------------|
+| org/struct/info | OrgStructInfo  |
+| org/dept/create | OrgDeptCreate  |
+| role/changeName | RoleChangeName |
