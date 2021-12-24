@@ -26,10 +26,11 @@ var (
 	OrgDeptDelete = NewApiModel("org/dept/delete", POST)
 	OrgStructInfo = NewApiModel("org/struct/info", GET)
 
-	OrgUserCreate     = NewApiModel("org/user/create", POST)
-	OrgUserDelete     = NewApiModel("org/user/delete", POST)
-	OrgUserUpdateUser = NewApiModel("org/user/updateUser", POST)
-	OrgUserOnOff      = NewApiModel("org/user/onoff", POST)
+	OrgUserCreate           = NewApiModel("org/user/create", POST)
+	OrgUserDelete           = NewApiModel("org/user/delete", POST)
+	OrgUserUpdateUser       = NewApiModel("org/user/updateUser", POST)
+	OrgUserOnOff            = NewApiModel("org/user/onoff", POST)
+	OrgUserFindUserInfoById = NewApiModel("org/user/findUserInfoById", POST)
 )
 
 // role
@@ -63,9 +64,46 @@ var (
 	CustomerQueryCustomer       = NewApiModel("customer/queryCustomer", POST)
 	CustomerGetCustomerGroup    = NewApiModel("customer/getCustomerGroup", POST)
 	CustomerDelcrms             = NewApiModel("customer/delcrms", POST)
+	CustomerGetTrajectory       = NewApiModel("customer/getTrajectory", POST)
+	CustomerGetCrmVisitDetails  = NewApiModel("customer/getCrmVisitDetails", POST)
+)
+
+// special
+var (
+	SpecialSelect = NewApiModel("special/select", POST)
 )
 
 // step
 var (
 	StepUpdate = NewApiModel("step/update", POST)
+)
+
+// record
+var (
+	RecordCall                  = NewApiModel("record/call", POST)
+	RecordGetFreeStatusUid      = NewApiModel("record/getFreeStatusUid", POST)
+	RecordSmsRecord             = NewApiModel("record/smsRecord", POST)
+	RecordTelRecord             = NewApiModel("record/telRecord", POST)
+	RecordSendSmsHistory        = NewApiModel("record/sendSmsHistory", POST)
+	RecordTelRecordHistoryQuery = NewApiModel("record/telRecordHistoryQuery", POST)
+	RecordAddTelRecord          = NewApiModel("record/addTelRecord", POST)
+)
+
+// trajectory
+var (
+	TrajectoryFindUserTrajectory        = NewApiModel("trajectory/findUserTrajectory", POST)
+	TrajectorySaveUserTrajectory        = NewApiModel("trajectory/saveUserTrajectory", POST)
+	TrajectoryFindHistoryUserTrajectory = NewApiModel("TrajectorySaveUserTrajectory", POST)
+)
+
+// robot
+var (
+	RobotAddTask       = NewApiModel("robot/addtask", POST)
+	RobotAddTaskRecord = NewApiModel("robot/addtaskrecord", POST)
+	RobotUpDateTask    = NewApiModel("robot/updatetask", POST)
+)
+
+// asynchronization
+var (
+	AsyncHroniZationCreate = NewApiModel("asynchronization/create", POST)
 )

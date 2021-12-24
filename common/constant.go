@@ -49,3 +49,10 @@ const (
 	Personage  CustomerQueryExistCrmType = 0
 	Enterprise CustomerQueryExistCrmType = 1
 )
+
+type TrajectoryinOutType int
+
+const (
+	CallIn  TrajectoryinOutType = 1
+	CallOut TrajectoryinOutType = 2
+)

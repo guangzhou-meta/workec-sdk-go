@@ -741,8 +741,8 @@ type CustomerQueryCustomerResponseDTODataPage struct {
 	MaxPageNo int   `json:"maxPageNo"`
 }
 
-func NewCustomerQueryCustomerRequestDTO() {
-	//TODO
+func NewCustomerQueryCustomerRequestDTO() *CustomerQueryCustomerResponseDTO {
+	return &CustomerQueryCustomerResponseDTO{}
 }
 
 type CustomerGetCustomerGroupRequestDTO struct {
@@ -783,4 +783,78 @@ type CustomerDelcrmsResponseDTOData struct {
 
 func NewCustomerDelcrmsRequestDTO() *CustomerDelcrmsResponseDTO {
 	return &CustomerDelcrmsResponseDTO{}
+}
+
+type CustomerGetTrajectoryRequestDTO struct {
+	CrmIds         string                               `json:"crmIds"`
+	Date           *CustomerGetTrajectoryRequestDTODate `json:"date"`
+	LastId         int64                                `json:"lastId"`
+	LastTime       string                               `json:"lastTime"`
+	PageSize       int                                  `json:"pageSize"`
+	TrajectoryType int                                  `json:"trajectoryType"`
+}
+
+type CustomerGetTrajectoryRequestDTODate struct {
+	StartTime string `json:"startTime"`
+	EndTime   string `json:"endTime"`
+}
+
+type CustomerGetTrajectoryResponseDTO struct {
+	CommonDTO
+	Data *CustomerGetTrajectoryResponseDTODate
+}
+
+type CustomerGetTrajectoryResponseDTODate struct {
+	NextPageDTO    *CustomerGetTrajectoryResponseDTODatetrajectoryList
+	TrajectoryList *[]CustomerGetTrajectoryResponseDTODatetrajectoryList
+}
+type CustomerGetTrajectoryResponseDTODatenextPageDTO struct {
+	HasNextPage  int    `json:"hasNextPage"`
+	NextLastId   int64  `json:"nextLastId"`
+	NextLastTime string `json:"nextLastTime"`
+	PageSize     int    `json:"pageSize"`
+}
+
+type CustomerGetTrajectoryResponseDTODatetrajectoryList struct {
+	Content         string `json:"content"`
+	CreateTime      int64  `json:"createTime"`
+	CrmId           int64  `json:"crmId"`
+	ReceiveUserIds  int64  `json:"receiveUserIds"`
+	TrajectoryId    int64  `json:"trajectoryId"`
+	TrajectoryTypeT int64  `json:"trajectoryTypeT"`
+	UserId          int64  `json:"userId"`
+}
+
+func NewCustomerGetTrajectoryRequestDTO() *CustomerGetTrajectoryResponseDTO {
+	return &CustomerGetTrajectoryResponseDTO{}
+}
+
+type CustomerGetCrmVisitDetailsRequestDTO struct {
+	UserIds   []int64 `json:"userIds"`
+	DeptIds   []int64 `json:"deptIds"`
+	StartDate string  `json:"startDate"`
+	EndDate   string  `json:"endDate"`
+	PageNo    int     `json:"pageNo"`
+	PageSize  int     `json:"pageSize"`
+}
+
+type CustomerGetCrmVisitDetailsResponseDTO struct {
+	CommonDTO
+	Data *CustomerGetCrmVisitDetailsResponseDTOData `json:"data"`
+}
+type CustomerGetCrmVisitDetailsResponseDTOData struct {
+	UserId      int64   `json:"userId"`
+	UserName    string  `json:"userName"`
+	CrmId       int64   `json:"crmId"`
+	CrmName     string  `json:"crmName"`
+	CompanyId   int64   `json:"companyId"`
+	CompanyName string  `json:"companyName"`
+	Time        string  `json:"time"`
+	Address     string  `json:"address"`
+	LongItUde   float64 `json:"longItude"`
+	Latitude    float64 `json:"latitude"`
+}
+
+func NewCustomerGetCrmVisitDetailsRequestDTO() *CustomerGetCrmVisitDetailsResponseDTO {
+	return &CustomerGetCrmVisitDetailsResponseDTO{}
 }

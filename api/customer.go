@@ -138,3 +138,17 @@ func (c *Config) CustomerDelcrms(reqData *dto.CustomerDelcrmsRequestDTO) (res *d
 	err = c.RequestByAutoResolve(common.CustomerDelcrms, reqData, res)
 	return
 }
+
+// CustomerGetTrajectory 分页查询客户轨迹
+func (c *Config) CustomerGetTrajectory(reqData *dto.CustomerGetTrajectoryRequestDTO) (res *dto.CustomerGetTrajectoryResponseDTO, err error) {
+	res = dto.NewCustomerGetTrajectoryRequestDTO()
+	err = c.RequestByAutoResolve(common.CustomerGetTrajectory, reqData, res)
+	return
+}
+
+// CustomerGetCrmVisitDetails 客户 - 获取员工签到记录
+func (c *Config) CustomerGetCrmVisitDetails(reqData *dto.CustomerGetCrmVisitDetailsRequestDTO) (res *dto.CustomerGetCrmVisitDetailsResponseDTO, err error) {
+	res = dto.NewCustomerGetCrmVisitDetailsRequestDTO()
+	err = c.RequestByAutoResolve(common.CustomerGetCrmVisitDetails, reqData, res)
+	return
+}

@@ -60,3 +60,10 @@ func (c *Config) OrgUserUserOnOff(reqData *dto.OrgUserUserOnOffRequestDTO) (res 
 	err = c.RequestByAutoResolve(common.OrgUserOnOff, reqData, res)
 	return
 }
+
+// OrgUserFindUserInfoById 组织架构 - 获取指定员工信息
+func (c *Config) OrgUserFindUserInfoById(reqData *dto.OrgUserFindUserInfoByIdRequestDTO) (res *dto.OrgUserFindUserInfoByIdResponseDTO, err error) {
+	res = dto.NewOrgUserFindUserInfoByIdDTO()
+	err = c.RequestByAutoResolve(common.OrgUserFindUserInfoById, reqData, res)
+	return
+}

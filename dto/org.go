@@ -122,3 +122,29 @@ type OrgUserUserOnOffRequestDTO struct {
 	Status    int64 `json:"status"`
 	OptUserId int64 `json:"optUserId"`
 }
+
+type OrgUserFindUserInfoByIdRequestDTO struct {
+	DeptInfo bool   `json:"deptInfo"`
+	UserId   string `json:"userId"`
+	Account  string `json:"account"`
+}
+
+type OrgUserFindUserInfoByIdResponseDTO struct {
+	CommonDTO
+	Data *OrgUserFindUserInfoByIdResponseDTOData `json:"data"`
+}
+type OrgUserFindUserInfoByIdResponseDTOData struct {
+	UserId   int64  `json:"userId"`
+	Mobile   string `json:"mobile"`
+	Email    string `json:"email"`
+	ReMark   string `json:"reMark"`
+	Name     string `json:"name"`
+	Account  string `json:"account"`
+	FaceUrl  string `json:"faceUrl"`
+	DeptId   int64  `json:"deptId"`
+	DeptName string `json:"deptName"`
+}
+
+func NewOrgUserFindUserInfoByIdDTO() *OrgUserFindUserInfoByIdResponseDTO {
+	return &OrgUserFindUserInfoByIdResponseDTO{}
+}
