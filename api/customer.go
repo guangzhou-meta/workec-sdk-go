@@ -152,3 +152,17 @@ func (c *Config) CustomerGetCrmVisitDetails(reqData *dto.CustomerGetCrmVisitDeta
 	err = c.RequestByAutoResolve(common.CustomerGetCrmVisitDetails, reqData, res)
 	return
 }
+
+// CustomerGetChannelSource 获取来源信息
+func (c *Config) CustomerGetChannelSource() (res *dto.CustomerGetChannelSourceResponseDTO, err error) {
+	res = dto.NewCustomerGetChannelSourceRequestDTO()
+	err = c.RequestByAutoResolve(common.CustomerGetChannelSource, nil, res)
+	return
+}
+
+// CustomerGetCasCadeFieldMapping 客户 - 获取级联字段信息
+func (c *Config) CustomerGetCasCadeFieldMapping(reqData *dto.CustomerGetCasCadeFieldMappingRequestDTO) (res *dto.CustomerGetCasCadeFieldMappingResponseDTO, err error) {
+	res = dto.NewCustomerGetCasCadeFieldMappingRequestDTO()
+	err = c.RequestByAutoResolve(common.CustomerGetCasCadeFieldMapping, reqData, res)
+	return
+}

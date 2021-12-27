@@ -45,27 +45,29 @@ var (
 
 // customer
 var (
-	CustomerAddCustomer         = NewApiModel("customer/addCustomer", POST)
-	CustomerUpdateCustomer      = NewApiModel("customer/updateCustomer", POST)
-	CustomerBatchUpdateCustomer = NewApiModel("customer/batchUpdateCustomer", POST)
-	CustomerCombine             = NewApiModel("customer/combine", POST)
-	CustomerFileUpload          = NewApiModel("customer/file/upload", POST)
-	CustomerShare               = NewApiModel("customer/share", POST)
-	CustomerChangeAbandon       = NewApiModel("customer/change/abandon", POST)
-	CustomerChangeUser          = NewApiModel("customer/change/user", POST)
-	CustomerFace                = NewApiModel("customer/face", POST)
-	CustomerQueryLabel          = NewApiModel("customer/queryLabel", POST)
-	CustomerQueryList           = NewApiModel("customer/queryList", POST)
-	CustomerFileList            = NewApiModel("customer/file/list", POST)
-	CustomerFolderList          = NewApiModel("customer/folder/list", POST)
-	CustomerQueryExist          = NewApiModel("customer/queryExist", POST)
-	CustomerQuery               = NewApiModel("customer/query", POST)
-	CustomerPreciseQuery        = NewApiModel("customer/preciseQuery", POST)
-	CustomerQueryCustomer       = NewApiModel("customer/queryCustomer", POST)
-	CustomerGetCustomerGroup    = NewApiModel("customer/getCustomerGroup", POST)
-	CustomerDelcrms             = NewApiModel("customer/delcrms", POST)
-	CustomerGetTrajectory       = NewApiModel("customer/getTrajectory", POST)
-	CustomerGetCrmVisitDetails  = NewApiModel("customer/getCrmVisitDetails", POST)
+	CustomerAddCustomer            = NewApiModel("customer/addCustomer", POST)
+	CustomerUpdateCustomer         = NewApiModel("customer/updateCustomer", POST)
+	CustomerBatchUpdateCustomer    = NewApiModel("customer/batchUpdateCustomer", POST)
+	CustomerCombine                = NewApiModel("customer/combine", POST)
+	CustomerFileUpload             = NewApiModel("customer/file/upload", POST)
+	CustomerShare                  = NewApiModel("customer/share", POST)
+	CustomerChangeAbandon          = NewApiModel("customer/change/abandon", POST)
+	CustomerChangeUser             = NewApiModel("customer/change/user", POST)
+	CustomerFace                   = NewApiModel("customer/face", POST)
+	CustomerQueryLabel             = NewApiModel("customer/queryLabel", POST)
+	CustomerQueryList              = NewApiModel("customer/queryList", POST)
+	CustomerFileList               = NewApiModel("customer/file/list", POST)
+	CustomerFolderList             = NewApiModel("customer/folder/list", POST)
+	CustomerQueryExist             = NewApiModel("customer/queryExist", POST)
+	CustomerQuery                  = NewApiModel("customer/query", POST)
+	CustomerPreciseQuery           = NewApiModel("customer/preciseQuery", POST)
+	CustomerQueryCustomer          = NewApiModel("customer/queryCustomer", POST)
+	CustomerGetCustomerGroup       = NewApiModel("customer/getCustomerGroup", POST)
+	CustomerDelcrms                = NewApiModel("customer/delcrms", POST)
+	CustomerGetTrajectory          = NewApiModel("customer/getTrajectory", POST)
+	CustomerGetCrmVisitDetails     = NewApiModel("customer/getCrmVisitDetails", POST)
+	CustomerGetChannelSource       = NewApiModel("customer/getChannelSource", GET)
+	CustomerGetCasCadeFieldMapping = NewApiModel("customer/getCasCadeFieldMapping", POST)
 )
 
 // special
@@ -106,4 +108,84 @@ var (
 // asynchronization
 var (
 	AsyncHroniZationCreate = NewApiModel("asynchronization/create", POST)
+	AsynchroniZationQuery  = NewApiModel("asynchronization/query", POST)
+)
+
+// config
+var (
+	ConfigGetBookFieldMapping = NewApiModel("config/getBookFieldMapping", GET)
+	ConfigGetFieldMapping     = NewApiModel("config/getFieldMapping", GET)
+	ConfigGetPubicPond        = NewApiModel("config/getPubicPond", GET)
+	ConfigGetStages           = NewApiModel("config/getStages", POST)
+)
+
+// statistics
+var (
+	StatisticsDigitalMapPhone                  = NewApiModel("statistics/digitalMap/phone", POST)
+	StatisticsLineGraphPhone                   = NewApiModel("statistics/lineGraph/phone", POST)
+	StatisticsDigitalMapWorkeffic              = NewApiModel("statistics/digitalMap/workeffic", POST)
+	StatisticsHistogramWorkeffic               = NewApiModel("statistics/histogram/workeffic", POST)
+	StatisticsDigitalMapTag                    = NewApiModel("statistics/digitalMap/tag", POST)
+	StatisticsHistogramTag                     = NewApiModel("statistics/histogram/tag", POST)
+	StatisticsDigitalMapCrmQuantity            = NewApiModel("statistics/digitalMap/crmQuantity", POST)
+	StatisticsCrmStatsWueryStepCountByChannel  = NewApiModel("statistics/crmStats/queryStepCountByChannel", POST)
+	StatisticsCrmStatsGetTopStepCountByChannel = NewApiModel("statistics/crmStats/getTopStepCountByChannel", POST)
+	StatisticsCrmStatsGetStepCount             = NewApiModel("/statistics/crmStats/getStepCount", POST)
+	StatisticsCrmStatsGroupbyUserIds           = NewApiModel("statistics/crmStats/groupbyUserIds", POST)
+)
+
+// plan
+var (
+	PlanGetPlanTemplate = NewApiModel("plan/getPlanTemplate", GET)
+)
+
+// sales
+var (
+	SalesGetSalesFiles        = NewApiModel("sales/getSalesFiles", POST)
+	SalesGetSalesFieldMapping = NewApiModel("sales/getSalesFieldMapping", GET)
+	SalesUpdateSales          = NewApiModel("SalesGetSalesFieldMapping", POST)
+	SalesUpdateStatus         = NewApiModel("sales/updateStatus", POST)
+	SalesGetSales             = NewApiModel("sales/getSales", POST)
+	SalesGetSalesDetail       = NewApiModel("sales/getSalesDetail", GET)
+	SalesDeleteProduct        = NewApiModel("sales/deleteProduct", POST)
+	SalesUpdateProduct        = NewApiModel("sales/updateProduct", POST)
+	SalesAddProduct           = NewApiModel("sales/addProduct", POST)
+	SalesUpload               = NewApiModel("sales/upload", POST)
+	SalesGetProductGroupList  = NewApiModel("sales/getProductGroupList", GET)
+	SalesGetProductList       = NewApiModel("sales/getProductList", POST)
+	SalesAddSales             = NewApiModel("sales/addSales", POST)
+	SalesGetProductsDetail    = NewApiModel("sales/getProductsDetail", POST)
+)
+
+// label
+var (
+	LabelAddLabelGroup        = NewApiModel("label/addLabelGroup", POST)
+	LabelGetLabelInfo         = NewApiModel("LabelAddLabelGroup", POST)
+	LabelAddLabel             = NewApiModel("label/addLabel", POST)
+	LabelUpdate               = NewApiModel("LabelUpdate", POST)
+	LabelDeleteCrmLabels      = NewApiModel("label/deleteCrmLabels", POST)
+	LabelUpdateLabelGroupName = NewApiModel("label/updateLabelGroupName", POST)
+)
+
+// contact
+var (
+	ContactBookAdd    = NewApiModel("contactbook/add", POST)
+	ContactBookDelete = NewApiModel("contactbook/delete", POST)
+	ContactBookUpdate = NewApiModel("contactbook/update", POST)
+	ContactBookList   = NewApiModel("contactbook/list", POST)
+)
+
+// im
+var (
+	ImMessageSend = NewApiModel("im/message/send", POST)
+)
+
+// apipush
+var (
+	ApiPushGetApiPush = NewApiModel("apipush/getApiPush", POST)
+)
+
+// clue
+var (
+	ClueImport = NewApiModel("clue/import", POST)
 )

@@ -858,3 +858,51 @@ type CustomerGetCrmVisitDetailsResponseDTOData struct {
 func NewCustomerGetCrmVisitDetailsRequestDTO() *CustomerGetCrmVisitDetailsResponseDTO {
 	return &CustomerGetCrmVisitDetailsResponseDTO{}
 }
+
+type CustomerGetChannelSourceResponseDTO struct {
+	CommonDTO
+	Data *CustomerGetChannelSourceResponseDTOData `json:"data"`
+}
+
+type CustomerGetChannelSourceResponseDTOData struct {
+	Id         int    `json:"id"`
+	Name       string `json:"name"`
+	UserId     int64  `json:"userId"`
+	CreateTime int64  `json:"createTime"`
+}
+
+func NewCustomerGetChannelSourceRequestDTO() *CustomerGetChannelSourceResponseDTO {
+	return &CustomerGetChannelSourceResponseDTO{}
+}
+
+type CustomerGetCasCadeFieldMappingRequestDTO struct {
+	FieldIds []int `json:"fieldIds"`
+	LastId   int   `json:"lastId"`
+}
+
+type CustomerGetCasCadeFieldMappingResponseDTO struct {
+	CommonDTO
+	Data *CustomerGetCasCadeFieldMappingResponseDTOData `json:"data"`
+}
+
+type CustomerGetCasCadeFieldMappingResponseDTOData struct {
+	NextPageDTO *CustomerGetCasCadeFieldMappingResponseDTODataNextPageDTO `json:"nextPageDTO"`
+	FieldParams *CustomerGetCasCadeFieldMappingResponseDTODataFieldParams `json:"fieldParams"`
+}
+
+type CustomerGetCasCadeFieldMappingResponseDTODataNextPageDTO struct {
+	PageSize    int `json:"pageSize"`
+	HasNextPage int `json:"hasNextPage"`
+	NextLastId  int `json:"nextLastId"`
+}
+type CustomerGetCasCadeFieldMappingResponseDTODataFieldParams struct {
+	FieldId       int    `json:"fieldId"`
+	ParamId       int    `json:"paramId"`
+	ParentParamId int    `json:"parentParamId"`
+	ParamName     string `json:"paramName"`
+	Sort          int    `json:"sort"`
+}
+
+func NewCustomerGetCasCadeFieldMappingRequestDTO() *CustomerGetCasCadeFieldMappingResponseDTO {
+	return &CustomerGetCasCadeFieldMappingResponseDTO{}
+}

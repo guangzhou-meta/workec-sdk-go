@@ -145,6 +145,6 @@ type OrgUserFindUserInfoByIdResponseDTOData struct {
 	DeptName string `json:"deptName"`
 }
 
-func NewOrgUserFindUserInfoByIdDTO() *OrgUserFindUserInfoByIdResponseDTO {
+func NewOrgUserFindUserInfoByIdResponseDTO() *OrgUserFindUserInfoByIdResponseDTO {
 	return &OrgUserFindUserInfoByIdResponseDTO{}
 }

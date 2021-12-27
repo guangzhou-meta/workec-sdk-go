@@ -17,7 +17,7 @@ type RobotAddTaskResponseDTO struct {
 	Data map[string]int `json:"data"`
 }
 
-func NewRobotAddTaskDTO() *RobotAddTaskResponseDTO {
+func NewRobotAddTaskRequestDTO() *RobotAddTaskResponseDTO {
 	return &RobotAddTaskResponseDTO{}
 }
 
@@ -40,7 +40,7 @@ type RobotAddTaskRecordResponseDTO struct {
 	Data map[string]string
 }
 
-func NewRobotAddTaskRecordDTO() *RobotAddTaskRecordResponseDTO {
+func NewRobotAddTaskRecordRequestDTO() *RobotAddTaskRecordResponseDTO {
 	return &RobotAddTaskRecordResponseDTO{}
 }
 
@@ -67,4 +67,100 @@ type AsyncHroniZationCreateRequestDTO struct {
 	ModifyTime   *RobotTimeRangeBaseVO `json:"modifyTime"`
 	ContactTime  *RobotTimeRangeBaseVO `json:"contactTime"`
 	CreateTime   *RobotTimeRangeBaseVO `json:"createTime"`
+}
+
+func NewAsyncHroniZationCreateRequestDTO() {
+
+}
+
+type AsynchroniZationQueryRequestDTO struct {
+	TaskId     int `json:"taskId"`
+	TaskStatus int `json:"taskStatus"`
+}
+
+type AsynchroniZationQueryResponseDTO struct {
+	CommonDTO
+	Data *AsynchroniZationQueryResponseDTOData `json:"data"`
+}
+
+type AsynchroniZationQueryResponseDTOData struct {
+	TaskId      int64  `json:"taskId"`
+	TaskName    int64  `json:"taskName"`
+	StackStatus int64  `json:"stackStatus"`
+	File        string `json:"file"`
+}
+
+func NewAsynchroniZationQueryRequestDTO() *AsynchroniZationQueryResponseDTO {
+	return &AsynchroniZationQueryResponseDTO{}
+}
+
+type ConfigGetBookFieldMappingResponseDTO struct {
+	CommonDTO
+	Data *ConfigGetBookFieldMappingResponseDTOData `json:"data"`
+}
+
+type ConfigGetBookFieldMappingResponseDTOData struct {
+	Id     int        `json:"id"`
+	Text   string     `json:"text"`
+	Type   int        `json:"type"`
+	IsMust int        `json:"isMust"`
+	Regex  string     `json:"regex"`
+	Level  int        `json:"level"`
+	Params []struct{} `json:"params"`
+}
+
+func NewConfigGetBookFieldMappingRequestDTO() *ConfigGetBookFieldMappingResponseDTO {
+	return &ConfigGetBookFieldMappingResponseDTO{}
+}
+
+type ConfigGetFieldMappingResponseDTO struct {
+	CommonDTO
+	Data *ConfigGetFieldMappingResponseDTOData `json:"data"`
+}
+
+type ConfigGetFieldMappingResponseDTOData struct {
+	FieldGroupId   int                                               `json:"fieldGroupId"`
+	FieldGroupName string                                            `json:"fieldGroupName"`
+	FieldGroupSort int                                               `json:"fieldGroupSort"`
+	FieldId        int                                               `json:"fieldId"`
+	FieldName      string                                            `json:"fieldName"`
+	Category       int                                               `json:"category"`
+	FieldParam     []*ConfigGetFieldMappingResponseDTODataFieldParam `json:"fieldParam"`
+}
+type ConfigGetFieldMappingResponseDTODataFieldParam struct {
+	ParamId   int    `json:"paramId"`
+	ParamName string `json:"paramName"`
+	ParamSort int    `json:"paramSort"`
+}
+
+func NewConfigGetFieldMappingRequestDTO() *ConfigGetFieldMappingResponseDTO {
+	return &ConfigGetFieldMappingResponseDTO{}
+}
+
+type ConfigGetPubicPondResponseDTO struct {
+	CommonDTO
+	Data *ConfigGetPubicPondResponseDTOData `json:"data"`
+}
+type ConfigGetPubicPondResponseDTOData struct {
+	PublicPondId   int64  `json:"publicPondId"`
+	PublicPondName string `json:"publicPondName"`
+}
+
+func NewConfigGetPubicPondRequestDTO() *ConfigGetPubicPondResponseDTO {
+	return &ConfigGetPubicPondResponseDTO{}
+}
+
+type ConfigGetStagesResponseDTO struct {
+	CommonDTO
+	Data *ConfigGetStagesResponseDTOData `json:"data"`
+}
+
+type ConfigGetStagesResponseDTOData struct {
+	Name   string `json:"name"`
+	Stage  int    `json:"stage"`
+	Status int    `json:"status"`
+}
+
+func NewConfigGetStagesRequestDTO() *ConfigGetStagesResponseDTO {
+	return &ConfigGetStagesResponseDTO{}
 }

@@ -31,7 +31,7 @@ const (
 type CustomerCustomerGender int
 
 const (
-	CustomerNot  CustomerCustomerGender = 0
+	CustomerNil  CustomerCustomerGender = 0
 	CustomerGirl CustomerCustomerGender = 1
 	CustomerMan  CustomerCustomerGender = 2
 )
@@ -55,4 +55,26 @@ type TrajectoryinOutType int
 const (
 	CallIn  TrajectoryinOutType = 1
 	CallOut TrajectoryinOutType = 2
+)
+
+type StatisticsSequential int
+
+const (
+	NotInclude StatisticsSequential = 0
+	Include    StatisticsSequential = 1
+)
+
+type ContactLunar int
+
+const (
+	ContactNotLeapMonth ContactLunar = 0
+	ContactLeapMonth    ContactLunar = 1
+)
+
+type ContactGender int
+
+const (
+	ContactNil  ContactGender = 0
+	ContactGirl ContactGender = 1
+	ContactMan  ContactGender = 2
 )
