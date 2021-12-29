@@ -63,7 +63,7 @@ type SalesUpdateSalesRequestDTO struct {
 type SalesUpdateStatusRequestDTO struct {
 	SaleId    int64 `json:"saleId"`
 	OptUserId int64 `json:"optUserId"`
-	3 int
+	Status    int   `json:"3"`
 }
 
 type SalesUpdateStatusResponseDTO struct {
@@ -282,14 +282,14 @@ func NewSalesGetProductListRequestDTO() *SalesGetProductListResponseDTO {
 }
 
 type SalesAddSalesRequestDTO struct {
-	OptUserId         int64   `json:"optUserId"`
-	CrmId             int64   `json:"crmId"`
-	OrderIsSubject    string  `json:"1"`
-	OrderStatus       int     `json:"3"`
-	SystemOrderAmount float64 `json:"4"`
-	2101                string  `json:"2101"`
-	2109 strint `json:"2109"`
-	Product *SalesAddSalesRequestDTOProduct `json:"product"`
+	OptUserId         int64                           `json:"optUserId"`
+	CrmId             int64                           `json:"crmId"`
+	OrderIsSubject    string                          `json:"1"`
+	OrderStatus       int                             `json:"3"`
+	SystemOrderAmount float64                         `json:"4"`
+	CustomParam0      string                          `json:"2101"`
+	CustomParam1      string                          `json:"2109"`
+	Product           *SalesAddSalesRequestDTOProduct `json:"product"`
 }
 
 type SalesAddSalesRequestDTOProduct struct {

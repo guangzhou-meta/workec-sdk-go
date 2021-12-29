@@ -21,7 +21,7 @@ func (c *Config) SalesGetSalesFieldMapping() (res *dto.SalesGetSalesFieldMapping
 
 // SalesUpdateSales 修改订单
 func (c *Config) SalesUpdateSales(reqData *dto.SalesUpdateSalesRequestDTO) (res *dto.SalesUpdateSalesResponseDTO, err error) {
-	res = dto.NewSalesUpdateSalesRequestDTO()
+	res = dto.NewSalesUpdateSalesResponseDTO()
 	err = c.RequestByAutoResolve(common.SalesUpdateSales, reqData, res)
 	return
 }

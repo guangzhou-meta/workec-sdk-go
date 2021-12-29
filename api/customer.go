@@ -35,9 +35,8 @@ func (c *Config) CustomerCombine(reqData *dto.CustomerCombineRequestDTO) (res *d
 
 // CustomerFileUpload 客户资料-文件上传(支持批量)
 func (c *Config) CustomerFileUpload(reqData *dto.CustomerFileUploadRequestDTO) (res *dto.CustomerFileUploadResponseDTO, err error) {
-	//res = dto.NewCustomerFileUploadResponseDTO()
-	//err = c.RequestByAutoResolve(common.CustomerFileUpload, reqData, res)
-	//TODO  文件上传
+	res = dto.NewCustomerFileUploadResponseDTO()
+	err = c.RequestByAutoResolve(common.CustomerFileUpload, reqData, res)
 	return
 }
 

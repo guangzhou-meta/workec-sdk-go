@@ -1,6 +1,9 @@
 package dto
 
-import "github.com/guangzhou-meta/workec-sdk-go/common"
+import (
+	"github.com/guangzhou-meta/workec-sdk-go/common"
+	"os"
+)
 
 type CustomerAddCustomerRequestDTO struct {
 	OptUserID int64                                       `json:"optUserID"`
@@ -10,34 +13,34 @@ type CustomerAddCustomerRequestDTO struct {
 }
 
 type CustomerAddCustomerRequestCustomerDetail struct {
-	FollowUserId      int64                          `json:"followUserId"`
-	CreateCrmType     common.CustomerCustomerCrmType `json:"createCrmType"`
-	GroupID           int64                          `json:"groupID"`
-	Name              string                         `json:"name"`
-	Call              string                         `json:"call"`
-	Gender            int                            `json:"gender"`
-	Birthday          string                         `json:"birthday"`
-	IsBirthdayLunar   int                            `json:"isBirthdayLunar"`
-	BirthdayLunarLeap int                            `json:"birthdayLunarLeap"`
-	Title             string                         `json:"title"`
-	Qq                string                         `json:"qq"`
-	Mobile            string                         `json:"mobile"`
-	Phone             string                         `json:"phone"`
-	Fax               string                         `json:"fax"`
-	MobileCode        string                         `json:"mobileCode"`
-	PhoneCode         string                         `json:"phoneCode"`
-	FaxCode           string                         `json:"faxCode"`
-	Email             string                         `json:"email"`
-	Company           string                         `json:"company"`
-	CompanyUrl        string                         `json:"companyUrl"`
-	CompanyAddress    string                         `json:"companyAddress"`
-	Memo              string                         `json:"memo"`
-	Vocation          string                         `json:"vocation"`
-	Channelld         int                            `json:"channelld"`
-	Prefecture        string                         `json:"prefecture"`
-	Wechat            string                         `json:"wechat"`
-	Founddate         string                         `json:"founddate"`
-	Fields            map[string]string              `json:"fields"`
+	FollowUserId      int64                           `json:"followUserId"`
+	CreateCrmType     *common.CustomerCustomerCrmType `json:"createCrmType"`
+	GroupID           int64                           `json:"groupID"`
+	Name              string                          `json:"name"`
+	Call              string                          `json:"call"`
+	Gender            int                             `json:"gender"`
+	Birthday          string                          `json:"birthday"`
+	IsBirthdayLunar   int                             `json:"isBirthdayLunar"`
+	BirthdayLunarLeap int                             `json:"birthdayLunarLeap"`
+	Title             string                          `json:"title"`
+	Qq                string                          `json:"qq"`
+	Mobile            string                          `json:"mobile"`
+	Phone             string                          `json:"phone"`
+	Fax               string                          `json:"fax"`
+	MobileCode        string                          `json:"mobileCode"`
+	PhoneCode         string                          `json:"phoneCode"`
+	FaxCode           string                          `json:"faxCode"`
+	Email             string                          `json:"email"`
+	Company           string                          `json:"company"`
+	CompanyUrl        string                          `json:"companyUrl"`
+	CompanyAddress    string                          `json:"companyAddress"`
+	Memo              string                          `json:"memo"`
+	Vocation          string                          `json:"vocation"`
+	Channelld         int                             `json:"channelld"`
+	Prefecture        string                          `json:"prefecture"`
+	Wechat            string                          `json:"wechat"`
+	Founddate         string                          `json:"founddate"`
+	Fields            map[string]string               `json:"fields"`
 }
 
 type CustomerAddCustomerResponseDTO struct {
@@ -64,69 +67,69 @@ type CustomerAddCustomerResponseDataSuccessIdListItem struct {
 }
 
 type CustomerUpdateCustomerRequestDTO struct {
-	OptUserId         int64                         `json:"optUserId"`
-	Repeat            bool                          `json:"repeat"`
-	CrmId             int64                         `json:"crmId"`
-	Name              string                        `json:"name"`
-	Call              string                        `json:"call"`
-	Memo              string                        `json:"memo"`
-	Gender            common.CustomerCustomerGender `json:"gender"`
-	Title             string                        `json:"title"`
-	Qq                string                        `json:"qq"`
-	Mobile            string                        `json:"mobile"`
-	Email             string                        `json:"email"`
-	Wechat            string                        `json:"wechat"`
-	Company           string                        `json:"company"`
-	CompanyUrl        string                        `json:"companyUrl"`
-	CompanyAddress    string                        `json:"companyAddress"`
-	Vocation          string                        `json:"vocation"`
-	Channelld         int                           `json:"channelld"`
-	Prefecture        string                        `json:"prefecture"`
-	Fields            map[string]string             `json:"fields"`
-	GroupId           int64                         `json:"groupId"`
-	PublicPondld      int64                         `json:"publicPondld"`
-	Phone             string                        `json:"phone"`
-	Fax               string                        `json:"fax"`
-	MobileCode        string                        `json:"mobileCode"`
-	PhoneCode         string                        `json:"phoneCode"`
-	FaxCode           string                        `json:"faxCode"`
-	Birthday          string                        `json:"birthday"`
-	IsBirthDayLunar   common.CustomerCustomerLunar  `json:"isBirthDayLunar"`
-	BirthdayLunarLeap common.CustomerCustomerLunar  `json:"birthdayLunarLeap"`
-	FoundDate         string                        `json:"founddate"`
+	OptUserId         int64                          `json:"optUserId"`
+	Repeat            bool                           `json:"repeat"`
+	CrmId             int64                          `json:"crmId"`
+	Name              string                         `json:"name"`
+	Call              string                         `json:"call"`
+	Memo              string                         `json:"memo"`
+	Gender            *common.CustomerCustomerGender `json:"gender"`
+	Title             string                         `json:"title"`
+	Qq                string                         `json:"qq"`
+	Mobile            string                         `json:"mobile"`
+	Email             string                         `json:"email"`
+	Wechat            string                         `json:"wechat"`
+	Company           string                         `json:"company"`
+	CompanyUrl        string                         `json:"companyUrl"`
+	CompanyAddress    string                         `json:"companyAddress"`
+	Vocation          string                         `json:"vocation"`
+	Channelld         int                            `json:"channelld"`
+	Prefecture        string                         `json:"prefecture"`
+	Fields            map[string]string              `json:"fields"`
+	GroupId           int64                          `json:"groupId"`
+	PublicPondld      int64                          `json:"publicPondld"`
+	Phone             string                         `json:"phone"`
+	Fax               string                         `json:"fax"`
+	MobileCode        string                         `json:"mobileCode"`
+	PhoneCode         string                         `json:"phoneCode"`
+	FaxCode           string                         `json:"faxCode"`
+	Birthday          string                         `json:"birthday"`
+	IsBirthDayLunar   *common.CustomerCustomerLunar  `json:"isBirthDayLunar"`
+	BirthdayLunarLeap *common.CustomerCustomerLunar  `json:"birthdayLunarLeap"`
+	FoundDate         string                         `json:"founddate"`
 }
 
 type CustomerBatchUpdateCustomerRequestDTO struct {
-	OptUserId         int64                         `json:"optUserId"`
-	Repeat            bool                          `json:"repeat"`
-	CrmId             int64                         `json:"crmId"`
-	GroupId           int64                         `json:"groupId"`
-	PublicPondId      int64                         `json:"publicPondId"`
-	Name              string                        `json:"name"`
-	Call              string                        `json:"call"`
-	Gender            common.CustomerCustomerGender `json:"gender"`
-	Birthday          string                        `json:"birthday"`
-	IsBirthdayLunar   int                           `json:"isBirthdayLunar"`
-	BirthdayLunarLeap int                           `json:"birthdayLunarLeap"`
-	Title             string                        `json:"title"`
-	Qq                string                        `json:"qq"`
-	Moblie            string                        `json:"moblie"`
-	Phone             string                        `json:"phone"`
-	Fax               string                        `json:"fax"`
-	MobileCode        string                        `json:"mobileCode"`
-	PhoneCode         string                        `json:"phoneCode"`
-	FaxCode           string                        `json:"faxCode"`
-	Email             string                        `json:"email"`
-	Comany            string                        `json:"company"`
-	ComanyUrl         string                        `json:"comanyUrl"`
-	CompanyAddress    string                        `json:"companyAddress"`
-	Memo              string                        `json:"memo"`
-	Vocation          string                        `json:"vocation"`
-	Channelld         int                           `json:"channelld"`
-	Prefecture        string                        `json:"prefecture"`
-	Wechat            string                        `json:"wechat"`
-	FoundDate         string                        `json:"founddate"`
-	FieLds            map[string]string             `json:"fieLds"`
+	OptUserId         int64                          `json:"optUserId"`
+	Repeat            bool                           `json:"repeat"`
+	CrmId             int64                          `json:"crmId"`
+	GroupId           int64                          `json:"groupId"`
+	PublicPondId      int64                          `json:"publicPondId"`
+	Name              string                         `json:"name"`
+	Call              string                         `json:"call"`
+	Gender            *common.CustomerCustomerGender `json:"gender"`
+	Birthday          string                         `json:"birthday"`
+	IsBirthdayLunar   int                            `json:"isBirthdayLunar"`
+	BirthdayLunarLeap int                            `json:"birthdayLunarLeap"`
+	Title             string                         `json:"title"`
+	Qq                string                         `json:"qq"`
+	Moblie            string                         `json:"moblie"`
+	Phone             string                         `json:"phone"`
+	Fax               string                         `json:"fax"`
+	MobileCode        string                         `json:"mobileCode"`
+	PhoneCode         string                         `json:"phoneCode"`
+	FaxCode           string                         `json:"faxCode"`
+	Email             string                         `json:"email"`
+	Comany            string                         `json:"company"`
+	ComanyUrl         string                         `json:"comanyUrl"`
+	CompanyAddress    string                         `json:"companyAddress"`
+	Memo              string                         `json:"memo"`
+	Vocation          string                         `json:"vocation"`
+	Channelld         int                            `json:"channelld"`
+	Prefecture        string                         `json:"prefecture"`
+	Wechat            string                         `json:"wechat"`
+	FoundDate         string                         `json:"founddate"`
+	FieLds            map[string]string              `json:"fieLds"`
 }
 
 type CustomerBatchUpdateCustomerResponseDTO struct {
@@ -140,40 +143,40 @@ func NewCustomerBatchUpdateCustomerResponseDTO() *CustomerBatchUpdateCustomerRes
 }
 
 type CustomerCombineRequestDTO struct {
-	OptUserId         int64                         `json:"optUserId"`
-	CrmIds            string                        `json:"crmIds"`
-	FollowUserId      int64                         `json:"followUserId"`
-	GroupId           int64                         `json:"groupId"`
-	PublicPondId      int64                         `json:"publicPondId"`
-	Name              string                        `json:"name"`
-	Call              string                        `json:"call"`
-	Gender            common.CustomerCustomerGender `json:"gender"`
-	Birthday          string                        `json:"birthday"`
-	IsBirthdayLunar   common.CustomerCustomerLunar  `json:"isBirthdayLunar"`
-	BirthdayLunarLeap common.CustomerCustomerLunar  `json:"birthdayLunarLeap"`
-	Title             string                        `json:"title"`
-	Qq                string                        `json:"qq"`
-	Mobile            string                        `json:"mobile"`
-	Phone             string                        `json:"phone"`
-	Fax               string                        `json:"fax"`
-	MobileCode        string                        `json:"mobileCode"`
-	PhoneCode         string                        `json:"phoneCode"`
-	FaxCode           string                        `json:"faxCode"`
-	Email             string                        `json:"email"`
-	Company           string                        `json:"company"`
-	CompanyUrl        string                        `json:"companyUrl"`
-	CompanyAddress    string                        `json:"companyAddress"`
-	Memo              string                        `json:"memo"`
-	Vocation          string                        `json:"vocation"`
-	Channelld         int                           `json:"channelld"`
-	Prefecture        string                        `json:"prefecture"`
-	Wechat            string                        `json:"wechat"`
-	FieIds            map[string]string             `json:"fieIds"`
+	OptUserId         int64                          `json:"optUserId"`
+	CrmIds            string                         `json:"crmIds"`
+	FollowUserId      int64                          `json:"followUserId"`
+	GroupId           int64                          `json:"groupId"`
+	PublicPondId      int64                          `json:"publicPondId"`
+	Name              string                         `json:"name"`
+	Call              string                         `json:"call"`
+	Gender            *common.CustomerCustomerGender `json:"gender"`
+	Birthday          string                         `json:"birthday"`
+	IsBirthdayLunar   *common.CustomerCustomerLunar  `json:"isBirthdayLunar"`
+	BirthdayLunarLeap *common.CustomerCustomerLunar  `json:"birthdayLunarLeap"`
+	Title             string                         `json:"title"`
+	Qq                string                         `json:"qq"`
+	Mobile            string                         `json:"mobile"`
+	Phone             string                         `json:"phone"`
+	Fax               string                         `json:"fax"`
+	MobileCode        string                         `json:"mobileCode"`
+	PhoneCode         string                         `json:"phoneCode"`
+	FaxCode           string                         `json:"faxCode"`
+	Email             string                         `json:"email"`
+	Company           string                         `json:"company"`
+	CompanyUrl        string                         `json:"companyUrl"`
+	CompanyAddress    string                         `json:"companyAddress"`
+	Memo              string                         `json:"memo"`
+	Vocation          string                         `json:"vocation"`
+	Channelld         int                            `json:"channelld"`
+	Prefecture        string                         `json:"prefecture"`
+	Wechat            string                         `json:"wechat"`
+	FieIds            map[string]string              `json:"fieIds"`
 }
 
 type CustomerCombineResponseDTO struct {
 	CommonDTO
-	data int64 `json:"data"`
+	Data int64 `json:"data"`
 }
 
 func NewCustomerCombineResponseDTO() *CustomerCombineResponseDTO {
@@ -181,10 +184,10 @@ func NewCustomerCombineResponseDTO() *CustomerCombineResponseDTO {
 }
 
 type CustomerFileUploadRequestDTO struct {
-	OptUserId int64  `json:"optUserId"`
-	CrmId     string `json:"crmId"`
-	FolderId  int    `json:"folderId"`
-	File      []int  `json:"file"`
+	OptUserId int64     `json:"optUserId"`
+	CrmId     string    `json:"crmId"`
+	FolderId  int       `json:"folderId"`
+	File      []os.File `json:"file"`
 }
 
 type CustomerFileUploadResponseDTO struct {
@@ -334,35 +337,35 @@ type CustomerOrderBySortType struct {
 }
 
 type CustomerQueryListRequestDTO struct {
-	Mobile           string                        `json:"mobile"`
-	Email            string                        `json:"email"`
-	Step             []int                         `json:"step"`
-	Labellds         []int                         `json:"labellds"`
-	FollowUserId     []int64                       `json:"followUserId"`
-	PubilcPondId     []int64                       `json:"pubilcPondId"`
-	ModifyTime       *TimeRangeBaseVO              `json:"modifyTime"`
-	ContactTime      *TimeRangeBaseVO              `json:"contactTime"`
-	CreateTime       *TimeRangeBaseVO              `json:"createTime"`
-	CrmIds           []int64                       `json:"crmIds"`
-	Gender           common.CustomerCustomerGender `json:"gender"`
-	Fax              string                        `json:"fax"`
-	Msn              string                        `json:"msn"`
-	Qq               string                        `json:"qq"`
-	Phone            string                        `json:"phone"`
-	Name             string                        `json:"name"`
-	Memo             string                        `json:"memo"`
-	Company          string                        `json:"company"`
-	EmailNums        int                           `json:"emailNums"`
-	Channel          []int64                       `json:"channel"`
-	Shared           bool                          `json:"shared"`
-	ApiAdd           bool                          `json:"apiAdd"`
-	CrmType          int                           `json:"crmType"`
-	ShareUserId      []int64                       `json:"shareUserId"`
-	CreateUserIdList []int64                       `json:"createUserIdList"`
-	PageSize         int                           `json:"pageSize"`
-	PageNo           int                           `json:"pageNo"`
-	Includes         string                        `json:"includes"`
-	OrderBy          *CustomerOrderBy              `json:"orderBy"`
+	Mobile           string                         `json:"mobile"`
+	Email            string                         `json:"email"`
+	Step             []int                          `json:"step"`
+	Labellds         []int                          `json:"labellds"`
+	FollowUserId     []int64                        `json:"followUserId"`
+	PubilcPondId     []int64                        `json:"pubilcPondId"`
+	ModifyTime       *TimeRangeBaseVO               `json:"modifyTime"`
+	ContactTime      *TimeRangeBaseVO               `json:"contactTime"`
+	CreateTime       *TimeRangeBaseVO               `json:"createTime"`
+	CrmIds           []int64                        `json:"crmIds"`
+	Gender           *common.CustomerCustomerGender `json:"gender"`
+	Fax              string                         `json:"fax"`
+	Msn              string                         `json:"msn"`
+	Qq               string                         `json:"qq"`
+	Phone            string                         `json:"phone"`
+	Name             string                         `json:"name"`
+	Memo             string                         `json:"memo"`
+	Company          string                         `json:"company"`
+	EmailNums        int                            `json:"emailNums"`
+	Channel          []int64                        `json:"channel"`
+	Shared           bool                           `json:"shared"`
+	ApiAdd           bool                           `json:"apiAdd"`
+	CrmType          int                            `json:"crmType"`
+	ShareUserId      []int64                        `json:"shareUserId"`
+	CreateUserIdList []int64                        `json:"createUserIdList"`
+	PageSize         int                            `json:"pageSize"`
+	PageNo           int                            `json:"pageNo"`
+	Includes         string                         `json:"includes"`
+	OrderBy          *CustomerOrderBy               `json:"orderBy"`
 }
 
 type CustomerQueryListResponseDTO struct {
@@ -490,7 +493,7 @@ type CustomerQueryExistRequestDTO struct {
 
 type CustomerQueryExistResponseDTO struct {
 	CommonDTO
-	Data CustomerQueryExistResponseDTOData `json:"data"`
+	Data *CustomerQueryExistResponseDTOData `json:"data"`
 }
 
 type CustomerQueryExistResponseDTOData struct {
@@ -506,7 +509,7 @@ type CustomerQueryExistResponseDTODatalist struct {
 	GroupId          int64                                                 `json:"groupId"`
 	Name             string                                                `json:"name"`
 	Call             string                                                `json:"call"`
-	Gender           common.CustomerCustomerGender                         `json:"gender"`
+	Gender           *common.CustomerCustomerGender                        `json:"gender"`
 	Title            string                                                `json:"title"`
 	Qq               string                                                `json:"qq"`
 	Phone            string                                                `json:"phone"`
@@ -532,7 +535,7 @@ type CustomerQueryExistResponseDTODatalist struct {
 	StorageTime      string                                                `json:"storageTime"`
 	PublicPondId     int64                                                 `json:"publicPondId"`
 	ApiAdd           bool                                                  `json:"apiAdd"`
-	CrmType          common.CustomerQueryExistCrmType                      `json:"crmType"`
+	CrmType          *common.CustomerQueryExistCrmType                     `json:"crmType"`
 	ShareUserId      int64                                                 `json:"shareUserId"`
 	LastContactTime  *CustomerQueryExistResponseDTODatalistLastContactTime `json:"lastContactTime"`
 }
@@ -588,32 +591,32 @@ type CustomerQueryResponseDTODataPageInfo struct {
 }
 
 type CustomerQueryResponseDTODataCustomerInfoList struct {
-	FollowUserId    int64                         `json:"followUserId"`
-	GroupId         int64                         `json:"groupId"`
-	Name            string                        `json:"name"`
-	Call            string                        `json:"call"`
-	Gender          common.CustomerCustomerGender `json:"gender"`
-	Birthday        string                        `json:"birthday"`
-	IsLunarBirthday common.CustomerCustomerLunar  `json:"isLunarBirthday"`
-	Title           string                        `json:"title"`
-	Qq              string                        `json:"qq"`
-	Mobile          string                        `json:"mobile"`
-	Phone           string                        `json:"phone"`
-	Fax             string                        `json:"fax"`
-	Email           string                        `json:"email"`
-	Company         string                        `json:"company"`
-	CompanyUrl      string                        `json:"companyUrl"`
-	CompanyAddress  string                        `json:"companyAddress"`
-	Memo            string                        `json:"memo"`
-	Vocation        string                        `json:"vocation"`
-	Channel         int                           `json:"channel"`
-	Prefecture      string                        `json:"prefecture"`
-	FieldInfos      map[string]string             `json:"fieldInfos"`
-	CrmIs           string                        `json:"crmIs"`
-	ModifyTime      *TimeRangeBaseVO              `json:"modifyTime"`
-	ContactTime     *TimeRangeBaseVO              `json:"contactTime"`
-	CreateTime      *TimeRangeBaseVO              `json:"createTime"`
-	Step            int                           `json:"step"`
+	FollowUserId    int64                          `json:"followUserId"`
+	GroupId         int64                          `json:"groupId"`
+	Name            string                         `json:"name"`
+	Call            string                         `json:"call"`
+	Gender          *common.CustomerCustomerGender `json:"gender"`
+	Birthday        string                         `json:"birthday"`
+	IsLunarBirthday *common.CustomerCustomerLunar  `json:"isLunarBirthday"`
+	Title           string                         `json:"title"`
+	Qq              string                         `json:"qq"`
+	Mobile          string                         `json:"mobile"`
+	Phone           string                         `json:"phone"`
+	Fax             string                         `json:"fax"`
+	Email           string                         `json:"email"`
+	Company         string                         `json:"company"`
+	CompanyUrl      string                         `json:"companyUrl"`
+	CompanyAddress  string                         `json:"companyAddress"`
+	Memo            string                         `json:"memo"`
+	Vocation        string                         `json:"vocation"`
+	Channel         int                            `json:"channel"`
+	Prefecture      string                         `json:"prefecture"`
+	FieldInfos      map[string]string              `json:"fieldInfos"`
+	CrmIs           string                         `json:"crmIs"`
+	ModifyTime      *TimeRangeBaseVO               `json:"modifyTime"`
+	ContactTime     *TimeRangeBaseVO               `json:"contactTime"`
+	CreateTime      *TimeRangeBaseVO               `json:"createTime"`
+	Step            int                            `json:"step"`
 }
 
 func NewCustomerQueryRequestDTO() *CustomerQueryResponseDTO {
@@ -630,32 +633,32 @@ type CustomerPreciseQueryResponseDTO struct {
 }
 
 type CustomerPreciseQueryResponseDTOData struct {
-	FollowUserId    int64                         `json:"followUserId"`
-	GroupId         int64                         `json:"groupId"`
-	Name            string                        `json:"name"`
-	Call            string                        `json:"call"`
-	Gender          common.CustomerCustomerGender `json:"gender"`
-	Birthday        string                        `json:"birthday"`
-	IsLunarBirthday common.CustomerCustomerLunar  `json:"isLunarBirthday"`
-	Title           string                        `json:"title"`
-	Qq              string                        `json:"qq"`
-	Mobile          string                        `json:"mobile"`
-	Phone           string                        `json:"phone"`
-	Fax             string                        `json:"fax"`
-	Email           string                        `json:"email"`
-	Company         string                        `json:"company"`
-	CompanyUrl      string                        `json:"companyUrl"`
-	CompanyAddress  string                        `json:"companyAddress"`
-	Memo            string                        `json:"memo"`
-	Vocation        string                        `json:"vocation"`
-	Channel         int                           `json:"channel"`
-	Prefecture      string                        `json:"prefecture"`
-	FieldInfos      map[string]string             `json:"fieldInfos"`
-	CrmId           string                        `json:"crmId"`
-	ModifyTime      string                        `json:"modifyTime"`
-	ContactTime     string                        `json:"contactTime"`
-	CreateTime      int64                         `json:"createTime"`
-	Step            int                           `json:"step"`
+	FollowUserId    int64                          `json:"followUserId"`
+	GroupId         int64                          `json:"groupId"`
+	Name            string                         `json:"name"`
+	Call            string                         `json:"call"`
+	Gender          *common.CustomerCustomerGender `json:"gender"`
+	Birthday        string                         `json:"birthday"`
+	IsLunarBirthday *common.CustomerCustomerLunar  `json:"isLunarBirthday"`
+	Title           string                         `json:"title"`
+	Qq              string                         `json:"qq"`
+	Mobile          string                         `json:"mobile"`
+	Phone           string                         `json:"phone"`
+	Fax             string                         `json:"fax"`
+	Email           string                         `json:"email"`
+	Company         string                         `json:"company"`
+	CompanyUrl      string                         `json:"companyUrl"`
+	CompanyAddress  string                         `json:"companyAddress"`
+	Memo            string                         `json:"memo"`
+	Vocation        string                         `json:"vocation"`
+	Channel         int                            `json:"channel"`
+	Prefecture      string                         `json:"prefecture"`
+	FieldInfos      map[string]string              `json:"fieldInfos"`
+	CrmId           string                         `json:"crmId"`
+	ModifyTime      string                         `json:"modifyTime"`
+	ContactTime     string                         `json:"contactTime"`
+	CreateTime      int64                          `json:"createTime"`
+	Step            int                            `json:"step"`
 }
 
 func NewCustomerPreciseQueryRequestDTO() *CustomerPreciseQueryResponseDTO {
@@ -673,7 +676,7 @@ type CustomerQueryCustomerRequestDTO struct {
 	ContactTime      *TimeRangeBaseVO                           `json:"contactTime"`
 	CreateTime       *TimeRangeBaseVO                           `json:"createTime"`
 	CrmIds           int64                                      `json:"crmIds"`
-	Gender           common.CustomerCustomerGender              `json:"gender"`
+	Gender           *common.CustomerCustomerGender             `json:"gender"`
 	Fax              string                                     `json:"fax"`
 	Msn              string                                     `json:"msn"`
 	Qq               string                                     `json:"qq"`
@@ -687,14 +690,14 @@ type CustomerQueryCustomerRequestDTO struct {
 	Channel          []int64                                    `json:"channel"`
 	Shared           bool                                       `json:"shared"`
 	ApiAdd           bool                                       `json:"apiAdd"`
-	CrmType          common.CustomerQueryExistCrmType           `json:"crmType"`
+	CrmType          *common.CustomerQueryExistCrmType          `json:"crmType"`
 	ShareUserId      []int64                                    `json:"shareUserId"`
 	CreateUserIdList []int64                                    `json:"createUserIdList"`
 	PageSize         int                                        `json:"pageSize"`
 	PageNo           int                                        `json:"pageNo"`
 	Includes         []string                                   `json:"includes"`
 	OrderBy          *CustomerQueryCustomerRequestDTOSortBaseVO `json:"orderBy"`
-	Sort             string                                     `json:"orderBy"`
+	Sort             string                                     `json:"sort"`
 }
 
 type CustomerQueryCustomerRequestDTOSortBaseVO struct {
@@ -726,12 +729,12 @@ type CustomerQueryCustomerResponseDTOData struct {
 }
 
 type CustomerQueryCustomerResponseDTODataList struct {
-	FollowUserId int64                         `json:"followUserId"`
-	GroupId      int64                         `json:"groupId"`
-	Name         string                        `json:"name"`
-	Call         string                        `json:"call"`
-	Gender       common.CustomerCustomerGender `json:"gender"`
-	Birthday     string                        `json:"birthday"`
+	FollowUserId int64                          `json:"followUserId"`
+	GroupId      int64                          `json:"groupId"`
+	Name         string                         `json:"name"`
+	Call         string                         `json:"call"`
+	Gender       *common.CustomerCustomerGender `json:"gender"`
+	Birthday     string                         `json:"birthday"`
 }
 
 type CustomerQueryCustomerResponseDTODataPage struct {

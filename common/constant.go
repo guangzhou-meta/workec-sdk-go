@@ -6,6 +6,7 @@ const (
 	ECRequestCorpId           = "X-Ec-Cid"
 	ECRequestSign             = "X-Ec-Sign"
 	ECRequestTimeStamp        = "X-Ec-TimeStamp"
+	ECRequestContentTypeFile  = "multipare/form-data"
 )
 
 const (

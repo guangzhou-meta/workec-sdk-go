@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/guangzhou-meta/workec-sdk-go/common"
 	"net/http"
 	"net/url"
 )
@@ -79,6 +80,18 @@ func (m *Request) POST(path string, reqData interface{}, resData interface{}) (e
 	return RequestAndResolve(req, resData)
 }
 
-func (m *Request) Upload() {
-	// TODO
+func (m *Request) Upload(path string, reqData interface{}, resData interface{}) (err error) {
+	reqUrl := fmt.Sprintf("%s/%s", m.serverBaseUrl, path)
+	bodyByte, err := json.Marshal(reqData)
+	if err != nil {
+		return
+	}
+	body := bytes.NewReader(bodyByte)
+	req, err := http.NewRequest("POST", reqUrl, body)
+	if err != nil {
+		return
+	}
+	AddHeader(req, m.corpId, m.appId, m.appSecret)
+	req.Header.Set(common.ECRequestContentType, common.ECRequestContentTypeFile)
+	return RequestAndResolve(req, resData)
 }

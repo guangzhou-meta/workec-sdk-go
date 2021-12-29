@@ -12,13 +12,13 @@ type ApiPushGetApiPushResponseDTO struct {
 	Data []*ApiPushGetApiPushResponseDTOData `json:"data"`
 }
 type ApiPushGetApiPushResponseDTOData struct {
-	F_Id          int64  `json:"f_id"`
-	F_Cost_Time   int64  `json:"f_cost_time"`
-	F_Create_Time string `json:"f_create_time"`
-	F_Corp_Id     int64  `json:"f_corp_id"`
-	F_Push_Paras  string `json:"f_push_paras"`
-	F_Push_Url    string `json:"f_push_url"`
-	F_Return_Code int64  `json:"f_return_code"`
+	FId         int64  `json:"f_id"`
+	FCostTime   int64  `json:"f_cost_time"`
+	FCreateTime string `json:"f_create_time"`
+	FCorpId     int64  `json:"f_corp_id"`
+	FPushParas  string `json:"f_push_paras"`
+	FPushUrl    string `json:"f_push_url"`
+	FReturnCode int64  `json:"f_return_code"`
 }
 
 func NewApiPushGetApiPushRequestDTO() *ApiPushGetApiPushResponseDTO {

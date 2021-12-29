@@ -57,7 +57,7 @@ type RobotUpDateTaskRequestDTO struct {
 	Finish     string `json:"finish"`
 }
 
-type AsyncHroniZationCreateRequestDTO struct {
+type AsynchronizationCreateRequestDTO struct {
 	TaskName     string                `json:"taskName"`
 	Type         int                   `json:"type"`
 	Step         int                   `json:"step"`
@@ -69,16 +69,25 @@ type AsyncHroniZationCreateRequestDTO struct {
 	CreateTime   *RobotTimeRangeBaseVO `json:"createTime"`
 }
 
-func NewAsyncHroniZationCreateRequestDTO() {
-
+type AsynchronizationCreateResponseDTO struct {
+	CommonDTO
+	Data AsynchronizationCreateResponseData `json:"data"`
 }
 
-type AsynchroniZationQueryRequestDTO struct {
+type AsynchronizationCreateResponseData struct {
+	TaskId int64 `json:"taskId"`
+}
+
+func NewAsynchronizationCreateResponseDTO() *AsynchronizationCreateResponseDTO {
+	return &AsynchronizationCreateResponseDTO{}
+}
+
+type AsynchronizationQueryRequestDTO struct {
 	TaskId     int `json:"taskId"`
 	TaskStatus int `json:"taskStatus"`
 }
 
-type AsynchroniZationQueryResponseDTO struct {
+type AsynchronizationQueryResponseDTO struct {
 	CommonDTO
 	Data *AsynchroniZationQueryResponseDTOData `json:"data"`
 }
@@ -90,8 +99,8 @@ type AsynchroniZationQueryResponseDTOData struct {
 	File        string `json:"file"`
 }
 
-func NewAsynchroniZationQueryRequestDTO() *AsynchroniZationQueryResponseDTO {
-	return &AsynchroniZationQueryResponseDTO{}
+func NewAsynchronizationQueryResponseDTO() *AsynchronizationQueryResponseDTO {
+	return &AsynchronizationQueryResponseDTO{}
 }
 
 type ConfigGetBookFieldMappingResponseDTO struct {

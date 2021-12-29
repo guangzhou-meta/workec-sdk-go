@@ -1,6 +1,8 @@
 package dto
 
-import "github.com/guangzhou-meta/workec-sdk-go/common"
+import (
+	"github.com/guangzhou-meta/workec-sdk-go/common"
+)
 
 type StatisticsDigitalMapPhoneRequestDTO struct {
 	Sequential     int               `json:"sequential"`

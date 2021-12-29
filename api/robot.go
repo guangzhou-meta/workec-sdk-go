@@ -27,16 +27,16 @@ func (c *Config) RobotUpDateTask(reqData *dto.RobotUpDateTaskRequestDTO) (res *d
 }
 
 // AsyncHroniZationCreate 创建任务
-func (c *Config) AsyncHroniZationCreate(reqData *dto.AsyncHroniZationCreateRequestDTO) (res *dto.AsyncHroniZationCreateResponseDTO, err error) {
-	res = dto.NewAsyncHroniZationCreateRequestDTO()
-	err = c.RequestByAutoResolve(common.AsyncHroniZationCreate, reqData, res)
+func (c *Config) AsynchronizationCreate(reqData *dto.AsynchronizationCreateRequestDTO) (res *dto.AsynchronizationCreateResponseDTO, err error) {
+	res = dto.NewAsynchronizationCreateResponseDTO()
+	err = c.RequestByAutoResolve(common.AsynchronizationCreate, reqData, res)
 	return
 }
 
 // AsynchroniZationQuery 查询任务
-func (c *Config) AsynchroniZationQuery(reqData *dto.AsynchroniZationQueryRequestDTO) (res *dto.AsynchroniZationQueryResponseDTO, err error) {
-	res = dto.NewAsynchroniZationQueryRequestDTO()
-	err = c.RequestByAutoResolve(common.AsynchroniZationQuery, reqData, res)
+func (c *Config) AsynchronizationQuery(reqData *dto.AsynchronizationQueryRequestDTO) (res *dto.AsynchronizationQueryResponseDTO, err error) {
+	res = dto.NewAsynchronizationQueryResponseDTO()
+	err = c.RequestByAutoResolve(common.AsynchronizationQuery, reqData, res)
 	return
 }
 

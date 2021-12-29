@@ -91,23 +91,23 @@ type ContactBookAddRequestDTO struct {
 }
 
 type ContactCrmContactBookVO struct {
-	Name           string               `json:"name"`
-	CallName       string               `json:"callName"`
-	Title          string               `json:"title"`
-	Mobile         string               `json:"mobile"`
-	MobileCode     string               `json:"mobileCode"`
-	Phone          string               `json:"phone"`
-	PhoneCode      string               `json:"phoneCode"`
-	PhoneExtension string               `json:"phoneExtension"`
-	Qq             string               `json:"qq"`
-	Email          string               `json:"email"`
-	Wechat         string               `json:"wechat"`
-	Birthday       string               `json:"birthday"`
-	LunarBirthday  string               `json:"lunarBirthday"`
-	LunarLeap      common.ContactLunar  `json:"lunarLeap"`
-	Memo           string               `json:"memo"`
-	Gender         common.ContactGender `json:"gender"`
-	Fields         map[string]string    `json:"fields"`
+	Name           string                `json:"name"`
+	CallName       string                `json:"callName"`
+	Title          string                `json:"title"`
+	Mobile         string                `json:"mobile"`
+	MobileCode     string                `json:"mobileCode"`
+	Phone          string                `json:"phone"`
+	PhoneCode      string                `json:"phoneCode"`
+	PhoneExtension string                `json:"phoneExtension"`
+	Qq             string                `json:"qq"`
+	Email          string                `json:"email"`
+	Wechat         string                `json:"wechat"`
+	Birthday       string                `json:"birthday"`
+	LunarBirthday  string                `json:"lunarBirthday"`
+	LunarLeap      *common.ContactLunar  `json:"lunarLeap"`
+	Memo           string                `json:"memo"`
+	Gender         *common.ContactGender `json:"gender"`
+	Fields         map[string]string     `json:"fields"`
 }
 
 type ContactBookAddResponseDTO struct {

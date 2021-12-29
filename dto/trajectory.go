@@ -108,7 +108,7 @@ type RecordTelRecordHistoryQueryRequestDTO struct {
 
 type RecordTelRecordHistoryQueryRequestDTODate struct {
 	StartTime string `json:"startTime"`
-	Enbtime   string `json:"enbtime"`
+	EndTime   string `json:"endTime"`
 }
 type RecordTelRecordHistoryQueryRequestDTOPage struct {
 	PageSize         int    `json:"pageSize"`
@@ -139,15 +139,15 @@ type RecordAddTelRecordRequestDTO struct {
 }
 
 type RecordAddTelRecordRequestDTOList struct {
-	F_User_Id     string                      `json:"f_user_id"`
-	F_Crm_Id      string                      `json:"f_crm_id"`
-	F_StartTime   string                      `json:"f_starttime"`
-	F_EndTime     string                      `json:"f_endtime"`
-	F_In_Out_Type *common.TrajectoryinOutType `json:"f_in_out_type"`
-	F_CallTime    int                         `json:"f_calltime"`
-	F_CallNo      string                      `json:"f_callno"`
-	F_CallToNo    string                      `json:"f_calltono"`
-	F_Path        string                      `json:"f_path"`
+	FUserId    string                      `json:"f_user_id"`
+	FCrmId     string                      `json:"f_crm_id"`
+	FStartTime string                      `json:"f_starttime"`
+	FEndTime   string                      `json:"f_endtime"`
+	FInOutType *common.TrajectoryinOutType `json:"f_in_out_type"`
+	FCallTime  int                         `json:"f_calltime"`
+	FCallNo    string                      `json:"f_callno"`
+	FCallToNo  string                      `json:"f_calltono"`
+	FPath      string                      `json:"f_path"`
 }
 
 type RecordAddTelRecordResponseDTO struct {

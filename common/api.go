@@ -5,6 +5,7 @@ type RequestMethod int
 const (
 	POST RequestMethod = iota
 	GET
+	FILE
 )
 
 type ApiModel struct {
@@ -49,7 +50,7 @@ var (
 	CustomerUpdateCustomer         = NewApiModel("customer/updateCustomer", POST)
 	CustomerBatchUpdateCustomer    = NewApiModel("customer/batchUpdateCustomer", POST)
 	CustomerCombine                = NewApiModel("customer/combine", POST)
-	CustomerFileUpload             = NewApiModel("customer/file/upload", POST)
+	CustomerFileUpload             = NewApiModel("customer/file/upload", FILE)
 	CustomerShare                  = NewApiModel("customer/share", POST)
 	CustomerChangeAbandon          = NewApiModel("customer/change/abandon", POST)
 	CustomerChangeUser             = NewApiModel("customer/change/user", POST)
@@ -107,8 +108,8 @@ var (
 
 // asynchronization
 var (
-	AsyncHroniZationCreate = NewApiModel("asynchronization/create", POST)
-	AsynchroniZationQuery  = NewApiModel("asynchronization/query", POST)
+	AsynchronizationCreate = NewApiModel("asynchronization/create", POST)
+	AsynchronizationQuery  = NewApiModel("asynchronization/query", POST)
 )
 
 // config
