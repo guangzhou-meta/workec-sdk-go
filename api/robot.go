@@ -7,14 +7,14 @@ import (
 
 // RobotAddTask 新增任务
 func (c *Config) RobotAddTask(reqData *dto.RobotAddTaskRequestDTO) (res *dto.RobotAddTaskResponseDTO, err error) {
-	res = dto.NewRobotAddTaskRequestDTO()
+	res = dto.NewRobotAddTaskResponseDTO()
 	err = c.RequestByAutoResolve(common.RobotAddTask, reqData, res)
 	return
 }
 
 // RobotAddTaskRecord 新增机器人通话记录
 func (c *Config) RobotAddTaskRecord(reqData *dto.RobotAddTaskRecordRequestDTO) (res *dto.RobotAddTaskRecordResponseDTO, err error) {
-	res = dto.NewRobotAddTaskRecordRequestDTO()
+	res = dto.NewRobotAddTaskRecordResponseDTO()
 	err = c.RequestByAutoResolve(common.RobotAddTaskRecord, reqData, res)
 	return
 }
@@ -42,28 +42,28 @@ func (c *Config) AsynchronizationQuery(reqData *dto.AsynchronizationQueryRequest
 
 // ConfigGetBookFieldMapping 获取企业联系人自定义字段
 func (c *Config) ConfigGetBookFieldMapping() (res *dto.ConfigGetBookFieldMappingResponseDTO, err error) {
-	res = dto.NewConfigGetBookFieldMappingRequestDTO()
+	res = dto.NewConfigGetBookFieldMappingResponseDTO()
 	err = c.RequestByAutoResolve(common.ConfigGetBookFieldMapping, nil, res)
 	return
 }
 
 // ConfigGetFieldMapping 获取自定义字段
 func (c *Config) ConfigGetFieldMapping() (res *dto.ConfigGetFieldMappingResponseDTO, err error) {
-	res = dto.NewConfigGetFieldMappingRequestDTO()
+	res = dto.NewConfigGetFieldMappingResponseDTO()
 	err = c.RequestByAutoResolve(common.ConfigGetFieldMapping, nil, res)
 	return
 }
 
 // ConfigGetPubicPond 获取业务组信息
 func (c *Config) ConfigGetPubicPond() (res *dto.ConfigGetPubicPondResponseDTO, err error) {
-	res = dto.NewConfigGetPubicPondRequestDTO()
+	res = dto.NewConfigGetPubicPondResponseDTO()
 	err = c.RequestByAutoResolve(common.ConfigGetPubicPond, nil, res)
 	return
 }
 
 // ConfigGetStages 获取客户进展信息
 func (c *Config) ConfigGetStages() (res *dto.ConfigGetStagesResponseDTO, err error) {
-	res = dto.NewConfigGetStagesRequestDTO()
+	res = dto.NewConfigGetStagesResponseDTO()
 	err = c.RequestByAutoResolve(common.ConfigGetStages, nil, res)
 	return
 }

@@ -21,6 +21,6 @@ type ApiPushGetApiPushResponseDTOData struct {
 	FReturnCode int64  `json:"f_return_code"`
 }
 
-func NewApiPushGetApiPushRequestDTO() *ApiPushGetApiPushResponseDTO {
+func NewApiPushGetApiPushResponseDTO() *ApiPushGetApiPushResponseDTO {
 	return &ApiPushGetApiPushResponseDTO{}
 }

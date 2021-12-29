@@ -30,7 +30,7 @@ type StatisticsDigitalMapPhoneResponseDTODataCharData struct {
 	Percentage float64 `json:"percentage"`
 }
 
-func NewStatisticsDigitalMapPhoneRequestDTO() *StatisticsDigitalMapPhoneResponseDTO {
+func NewStatisticsDigitalMapPhoneResponseDTO() *StatisticsDigitalMapPhoneResponseDTO {
 	return &StatisticsDigitalMapPhoneResponseDTO{}
 }
 
@@ -56,7 +56,7 @@ type StatisticsLineGraphPhoneResponseDTODataChartData struct {
 	Value []int  `json:"value"`
 }
 
-func NewStatisticsLineGraphPhoneRequestDTO() *StatisticsLineGraphPhoneResponseDTO {
+func NewStatisticsLineGraphPhoneResponseDTO() *StatisticsLineGraphPhoneResponseDTO {
 	return &StatisticsLineGraphPhoneResponseDTO{}
 }
 
@@ -86,7 +86,7 @@ type StatisticsDigitalMapWorkefficResponseDTODataChartData struct {
 	Percentage float64 `json:"percentage"`
 }
 
-func NewStatisticsDigitalMapWorkefficRequestDTO() *StatisticsDigitalMapWorkefficResponseDTO {
+func NewStatisticsDigitalMapWorkefficResponseDTO() *StatisticsDigitalMapWorkefficResponseDTO {
 	return &StatisticsDigitalMapWorkefficResponseDTO{}
 }
 
@@ -107,7 +107,7 @@ type StatisticsHistogramWorkefficResponseDTOData struct {
 	CharyData []struct{} `json:"charyData"`
 }
 
-func NewStatisticsHistogramWorkefficRequestDTO() *StatisticsHistogramWorkefficResponseDTO {
+func NewStatisticsHistogramWorkefficResponseDTO() *StatisticsHistogramWorkefficResponseDTO {
 	return &StatisticsHistogramWorkefficResponseDTO{}
 }
 
@@ -133,7 +133,7 @@ type StatisticsDigitalMapTagResponseDTOData struct {
 	Percentage float64 `json:"percentage"`
 }
 
-func NewStatisticsDigitalMapTagRequestDTO() *StatisticsDigitalMapTagResponseDTO {
+func NewStatisticsDigitalMapTagResponseDTO() *StatisticsDigitalMapTagResponseDTO {
 	return &StatisticsDigitalMapTagResponseDTO{}
 }
 
@@ -158,7 +158,7 @@ type StatisticsHistogramTagResponseDTODataChartData struct {
 	Value []int `json:"value"`
 }
 
-func NewStatisticsHistogramTagRequestDTO() *StatisticsHistogramTagResponseDTO {
+func NewStatisticsHistogramTagResponseDTO() *StatisticsHistogramTagResponseDTO {
 	return &StatisticsHistogramTagResponseDTO{}
 }
 
@@ -188,7 +188,7 @@ type StatisticsDigitalMapCrmQuantityResponseDTODataChartData struct {
 	Percentage float64 `json:"percentage"`
 }
 
-func NewStatisticsDigitalMapCrmQuantityRequestDTO() *StatisticsDigitalMapCrmQuantityResponseDTO {
+func NewStatisticsDigitalMapCrmQuantityResponseDTO() *StatisticsDigitalMapCrmQuantityResponseDTO {
 	return &StatisticsDigitalMapCrmQuantityResponseDTO{}
 }
 
@@ -212,7 +212,7 @@ type StatisticsCrmStatsWueryStepCountByChannelResponseDTOData struct {
 	Channelld  int64  `json:"channelld"`
 }
 
-func NewStatisticsCrmStatsWueryStepCountByChannelRequestDTO() *StatisticsCrmStatsWueryStepCountByChannelResponseDTO {
+func NewStatisticsCrmStatsWueryStepCountByChannelResponseDTO() *StatisticsCrmStatsWueryStepCountByChannelResponseDTO {
 	return &StatisticsCrmStatsWueryStepCountByChannelResponseDTO{}
 }
 
@@ -242,7 +242,7 @@ type StatisticsCrmStatsGetTopStepCountByChannelResponseDTOData struct {
 	ConversionPercent float64 `json:"conversionPercent"`
 }
 
-func NewStatisticsCrmStatsGetTopStepCountByChannelRequestDTO() *StatisticsCrmStatsGetTopStepCountByChannelResponseDTO {
+func NewStatisticsCrmStatsGetTopStepCountByChannelResponseDTO() *StatisticsCrmStatsGetTopStepCountByChannelResponseDTO {
 	return &StatisticsCrmStatsGetTopStepCountByChannelResponseDTO{}
 }
 
@@ -267,7 +267,7 @@ type StatisticsCrmStatsGetStepCountResponseDTOData struct {
 	Count int `json:"count"`
 }
 
-func NewStatisticsCrmStatsGetStepCountRequestDTO() *StatisticsCrmStatsGetStepCountResponseDTO {
+func NewStatisticsCrmStatsGetStepCountResponseDTO() *StatisticsCrmStatsGetStepCountResponseDTO {
 	return &StatisticsCrmStatsGetStepCountResponseDTO{}
 }
 
@@ -289,6 +289,6 @@ type StatisticsCrmStatsGroupbyUserIdsResponseDTOData struct {
 	Num       int `json:"num"`
 }
 
-func NewStatisticsCrmStatsGroupbyUserIdsRequestDTO() *StatisticsCrmStatsGroupbyUserIdsResponseDTO {
+func NewStatisticsCrmStatsGroupbyUserIdsResponseDTO() *StatisticsCrmStatsGroupbyUserIdsResponseDTO {
 	return &StatisticsCrmStatsGroupbyUserIdsResponseDTO{}
 }

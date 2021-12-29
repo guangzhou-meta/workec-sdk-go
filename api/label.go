@@ -14,7 +14,7 @@ func (c *Config) LabelAddLabelGroup(reqData *dto.LabelAddLabelGroupRequestDTO) (
 
 // LabelGetLabelInfo 获取标签信息
 func (c *Config) LabelGetLabelInfo(reqData *dto.LabelGetLabelInfoRequestDTO) (res *dto.LabelGetLabelInfoResponseDTO, err error) {
-	res = dto.NewLabelGetLabelInfoRequestDTO()
+	res = dto.NewLabelGetLabelInfoResponseDTO()
 	err = c.RequestByAutoResolve(common.LabelGetLabelInfo, reqData, res)
 	return
 }
@@ -28,14 +28,14 @@ func (c *Config) LabelAddLabel(reqData *dto.LabelAddLabelRequestDTO) (res *dto.C
 
 // LabelUpdate 修改客户标签（支持批量）
 func (c *Config) LabelUpdate(reqData *dto.LabelUpdateRequestDTO) (res *dto.LabelUpdateResponseDTO, err error) {
-	res = dto.NewLabelUpdateRequestDTO()
+	res = dto.NewLabelUpdateResponseDTO()
 	err = c.RequestByAutoResolve(common.LabelUpdate, reqData, res)
 	return
 }
 
 // LabelDeleteCrmLabels 删除客户标签
 func (c *Config) LabelDeleteCrmLabels(reqData *dto.LabelDeleteCrmLabelsRequestDTO) (res *dto.LabelDeleteCrmLabelsResponseDTO, err error) {
-	res = dto.NewLabelDeleteCrmLabelsRequestDTO()
+	res = dto.NewLabelDeleteCrmLabelsResponseDTO()
 	err = c.RequestByAutoResolve(common.LabelDeleteCrmLabels, reqData, res)
 	return
 }
@@ -49,7 +49,7 @@ func (c *Config) LabelUpdateLabelGroupName(reqData *dto.LabelUpdateLabelGroupNam
 
 // ContactBookAdd 新增联系人
 func (c *Config) ContactBookAdd(reqData *dto.ContactBookAddRequestDTO) (res *dto.ContactBookAddResponseDTO, err error) {
-	res = dto.NewContactBookAddRequestDTO()
+	res = dto.NewContactBookAddResponseDTO()
 	err = c.RequestByAutoResolve(common.ContactBookAdd, reqData, res)
 	return
 }
@@ -70,7 +70,7 @@ func (c *Config) ContactBookUpdate(reqData *dto.ContactBookUpdateRequestDTO) (re
 
 // ContactBookList 查询联系人
 func (c *Config) ContactBookList(reqData *dto.ContactBookListRequestDTO) (res *dto.ContactBookListResponseDTO, err error) {
-	res = dto.NewContactBookListRequestDTO()
+	res = dto.NewContactBookListResponseDTO()
 	err = c.RequestByAutoResolve(common.ContactBookList, reqData, res)
 	return
 }

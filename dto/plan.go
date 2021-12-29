@@ -26,6 +26,6 @@ type PlanGetPlanTemplateResponseDTOData struct {
 	SubType     string `json:"subType"`
 }
 
-func NewPlanGetPlanTemplateRequestDTO() *PlanGetPlanTemplateResponseDTO {
+func NewPlanGetPlanTemplateResponseDTO() *PlanGetPlanTemplateResponseDTO {
 	return &PlanGetPlanTemplateResponseDTO{}
 }

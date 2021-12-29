@@ -11,6 +11,6 @@ type StepUpdateResponseDTO struct {
 	Data bool `json:"data"`
 }
 
-func NewStepUpdateRequestDTO() *StepUpdateResponseDTO {
+func NewStepUpdateResponseDTO() *StepUpdateResponseDTO {
 	return &StepUpdateResponseDTO{}
 }

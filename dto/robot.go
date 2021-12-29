@@ -17,7 +17,7 @@ type RobotAddTaskResponseDTO struct {
 	Data map[string]int `json:"data"`
 }
 
-func NewRobotAddTaskRequestDTO() *RobotAddTaskResponseDTO {
+func NewRobotAddTaskResponseDTO() *RobotAddTaskResponseDTO {
 	return &RobotAddTaskResponseDTO{}
 }
 
@@ -40,7 +40,7 @@ type RobotAddTaskRecordResponseDTO struct {
 	Data map[string]string
 }
 
-func NewRobotAddTaskRecordRequestDTO() *RobotAddTaskRecordResponseDTO {
+func NewRobotAddTaskRecordResponseDTO() *RobotAddTaskRecordResponseDTO {
 	return &RobotAddTaskRecordResponseDTO{}
 }
 
@@ -118,7 +118,7 @@ type ConfigGetBookFieldMappingResponseDTOData struct {
 	Params []struct{} `json:"params"`
 }
 
-func NewConfigGetBookFieldMappingRequestDTO() *ConfigGetBookFieldMappingResponseDTO {
+func NewConfigGetBookFieldMappingResponseDTO() *ConfigGetBookFieldMappingResponseDTO {
 	return &ConfigGetBookFieldMappingResponseDTO{}
 }
 
@@ -142,7 +142,7 @@ type ConfigGetFieldMappingResponseDTODataFieldParam struct {
 	ParamSort int    `json:"paramSort"`
 }
 
-func NewConfigGetFieldMappingRequestDTO() *ConfigGetFieldMappingResponseDTO {
+func NewConfigGetFieldMappingResponseDTO() *ConfigGetFieldMappingResponseDTO {
 	return &ConfigGetFieldMappingResponseDTO{}
 }
 
@@ -155,7 +155,7 @@ type ConfigGetPubicPondResponseDTOData struct {
 	PublicPondName string `json:"publicPondName"`
 }
 
-func NewConfigGetPubicPondRequestDTO() *ConfigGetPubicPondResponseDTO {
+func NewConfigGetPubicPondResponseDTO() *ConfigGetPubicPondResponseDTO {
 	return &ConfigGetPubicPondResponseDTO{}
 }
 
@@ -170,6 +170,6 @@ type ConfigGetStagesResponseDTOData struct {
 	Status int    `json:"status"`
 }
 
-func NewConfigGetStagesRequestDTO() *ConfigGetStagesResponseDTO {
+func NewConfigGetStagesResponseDTO() *ConfigGetStagesResponseDTO {
 	return &ConfigGetStagesResponseDTO{}
 }

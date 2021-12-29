@@ -23,7 +23,7 @@ type SalesGetSalesFilesResponseDTOData struct {
 	UpdateTime     string `json:"updateTime"`
 }
 
-func NewSalesGetSalesFilesRequestDTO() *SalesGetSalesFilesResponseDTO {
+func NewSalesGetSalesFilesResponseDTO() *SalesGetSalesFilesResponseDTO {
 	return &SalesGetSalesFilesResponseDTO{}
 }
 
@@ -53,11 +53,18 @@ type SalesGetSalesFieldMappingResponseDTODataFieldsParams struct {
 	Value string `json:"value"`
 }
 
-func NewSalesGetSalesFieldMappingRequestDTO() *SalesGetSalesFieldMappingResponseDTO {
+func NewSalesGetSalesFieldMappingResponseDTO() *SalesGetSalesFieldMappingResponseDTO {
 	return &SalesGetSalesFieldMappingResponseDTO{}
 }
 
 type SalesUpdateSalesRequestDTO struct {
+}
+
+type SalesUpdateSalesResponseDTO struct {
+}
+
+func NewSalesUpdateSalesResponseDTO() *SalesUpdateSalesResponseDTO {
+	return &SalesUpdateSalesResponseDTO{}
 }
 
 type SalesUpdateStatusRequestDTO struct {
@@ -71,7 +78,7 @@ type SalesUpdateStatusResponseDTO struct {
 	Data int `json:"data"`
 }
 
-func NewSalesUpdateStatusRequestDTO() *SalesUpdateStatusResponseDTO {
+func NewSalesUpdateStatusResponseDTO() *SalesUpdateStatusResponseDTO {
 	return &SalesUpdateStatusResponseDTO{}
 }
 
@@ -115,7 +122,7 @@ type SalesGetSalesResponseDTOData struct {
 	DoUserid    string `json:"doUserid"`
 }
 
-func NewSalesGetSalesRequestDTO() *SalesGetSalesResponseDTO {
+func NewSalesGetSalesResponseDTO() *SalesGetSalesResponseDTO {
 	return &SalesGetSalesResponseDTO{}
 }
 
@@ -155,7 +162,7 @@ type SalesGetSalesDetailResponseDTODataCustomFieldValues struct {
 	FieldValue string `json:"fieldValue"`
 }
 
-func NewSalesGetSalesDetailRequestDTO() *SalesGetSalesDetailResponseDTO {
+func NewSalesGetSalesDetailResponseDTO() *SalesGetSalesDetailResponseDTO {
 	return &SalesGetSalesDetailResponseDTO{}
 }
 
@@ -169,7 +176,7 @@ type SalesDeleteProductResponseDTO struct {
 	Data map[string]string
 }
 
-func NewSalesDeleteProductRequestDTO() *SalesDeleteProductResponseDTO {
+func NewSalesDeleteProductResponseDTO() *SalesDeleteProductResponseDTO {
 	return &SalesDeleteProductResponseDTO{}
 }
 
@@ -203,7 +210,7 @@ type SalesUpdateProductResponseDTO struct {
 	Data int64 `json:"data"`
 }
 
-func NewSalesUpdateProductRequestDTO() *SalesUpdateProductResponseDTO {
+func NewSalesUpdateProductResponseDTO() *SalesUpdateProductResponseDTO {
 	return &SalesUpdateProductResponseDTO{}
 }
 
@@ -237,7 +244,7 @@ type SalesAddProductResponseDTO struct {
 	Data int64 `json:"data"`
 }
 
-func NewSalesAddProductRequestDTO() *SalesAddProductResponseDTO {
+func NewSalesAddProductResponseDTO() *SalesAddProductResponseDTO {
 	return &SalesAddProductResponseDTO{}
 }
 
@@ -253,7 +260,7 @@ type SalesUploadResponseDTO struct {
 	Data map[string]string `json:"data"`
 }
 
-func NewSalesUploadRequestDTO() *SalesUploadResponseDTO {
+func NewSalesUploadResponseDTO() *SalesUploadResponseDTO {
 	return &SalesUploadResponseDTO{}
 }
 
@@ -262,7 +269,7 @@ type SalesGetProductGroupListResponseDTO struct {
 	Data map[string]string `json:"data"`
 }
 
-func NewSalesGetProductGroupListRequestDTO() *SalesGetProductGroupListResponseDTO {
+func NewSalesGetProductGroupListResponseDTO() *SalesGetProductGroupListResponseDTO {
 	return &SalesGetProductGroupListResponseDTO{}
 }
 
@@ -277,7 +284,7 @@ type SalesGetProductListResponseDTO struct {
 	Data map[string]string `json:"data"`
 }
 
-func NewSalesGetProductListRequestDTO() *SalesGetProductListResponseDTO {
+func NewSalesGetProductListResponseDTO() *SalesGetProductListResponseDTO {
 	return &SalesGetProductListResponseDTO{}
 }
 
@@ -297,8 +304,13 @@ type SalesAddSalesRequestDTOProduct struct {
 	Data int64 `json:"data"`
 }
 
-func NewSalesAddSalesRequestDTO() *SalesAddSalesRequestDTOProduct {
-	return &SalesAddSalesRequestDTOProduct{}
+type SalesAddSalesResponseDTO struct {
+	CommonDTO
+	Data int64 `json:"data"`
+}
+
+func NewSalesAddSalesResponseDTO() *SalesAddSalesResponseDTO {
+	return &SalesAddSalesResponseDTO{}
 }
 
 type SalesGetProductsDetailRequestDTO struct {
@@ -328,6 +340,6 @@ type SalesGetProductsDetailResponseDTOData struct {
 	Del              int     `json:"del"`
 }
 
-func NewSalesGetProductsDetailRequestDTO() *SalesGetProductsDetailResponseDTO {
+func NewSalesGetProductsDetailResponseDTO() *SalesGetProductsDetailResponseDTO {
 	return &SalesGetProductsDetailResponseDTO{}
 }

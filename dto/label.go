@@ -32,7 +32,7 @@ type LabelGetLabelInfoResponseDTODataLabelList struct {
 	LabelSort int    `json:"labelSort"`
 }
 
-func NewLabelGetLabelInfoRequestDTO() *LabelGetLabelInfoResponseDTO {
+func NewLabelGetLabelInfoResponseDTO() *LabelGetLabelInfoResponseDTO {
 	return &LabelGetLabelInfoResponseDTO{}
 }
 
@@ -54,7 +54,7 @@ type LabelUpdateResponseDTO struct {
 	Data bool `json:"data"`
 }
 
-func NewLabelUpdateRequestDTO() *LabelUpdateResponseDTO {
+func NewLabelUpdateResponseDTO() *LabelUpdateResponseDTO {
 	return &LabelUpdateResponseDTO{}
 }
 
@@ -74,7 +74,7 @@ type LabelDeleteCrmLabelsResponseDTOData struct {
 	FailureCrmIds []int64 `json:"failureCrmIds"`
 }
 
-func NewLabelDeleteCrmLabelsRequestDTO() *LabelDeleteCrmLabelsResponseDTO {
+func NewLabelDeleteCrmLabelsResponseDTO() *LabelDeleteCrmLabelsResponseDTO {
 	return &LabelDeleteCrmLabelsResponseDTO{}
 }
 
@@ -115,7 +115,7 @@ type ContactBookAddResponseDTO struct {
 	Data int64 `json:"data"`
 }
 
-func NewContactBookAddRequestDTO() *ContactBookAddResponseDTO {
+func NewContactBookAddResponseDTO() *ContactBookAddResponseDTO {
 	return &ContactBookAddResponseDTO{}
 }
 
@@ -142,7 +142,7 @@ type ContactBookListResponseDTO struct {
 	Data *ContactCrmContactBookVO `json:"data"`
 }
 
-func NewContactBookListRequestDTO() *ContactBookListResponseDTO {
+func NewContactBookListResponseDTO() *ContactBookListResponseDTO {
 	return &ContactBookListResponseDTO{}
 }
 

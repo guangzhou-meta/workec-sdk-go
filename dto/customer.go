@@ -230,7 +230,7 @@ type CustomerShareResponseDTOData struct {
 	Msg    string `json:"msg"`
 }
 
-func NewCustomerShareRequestDTO() *CustomerShareResponseDTO {
+func NewCustomerShareResponseDTO() *CustomerShareResponseDTO {
 	return &CustomerShareResponseDTO{}
 }
 
@@ -251,7 +251,7 @@ type CustomerChangeAbandonResponseDTOData struct {
 	Name  string `json:"name"`
 }
 
-func NewCustomerChangeAbandonRequestDTO() *CustomerChangeAbandonResponseDTO {
+func NewCustomerChangeAbandonResponseDTO() *CustomerChangeAbandonResponseDTO {
 	return &CustomerChangeAbandonResponseDTO{}
 }
 
@@ -271,7 +271,7 @@ type CustomerChangeUserResponseDTOData struct {
 	Name  string `json:"name"`
 }
 
-func NewCustomerChangeUserRequestDTO() *CustomerChangeUserResponseDTO {
+func NewCustomerChangeUserResponseDTO() *CustomerChangeUserResponseDTO {
 	return &CustomerChangeUserResponseDTO{}
 }
 
@@ -291,7 +291,7 @@ type CustomerFaceRequestDTOData struct {
 	Name  string `json:"name"`
 }
 
-func NewCustomerFaceRequestDTO() *CustomerFaceResponseDTO {
+func NewCustomerFaceResponseDTO() *CustomerFaceResponseDTO {
 	return &CustomerFaceResponseDTO{}
 }
 
@@ -309,7 +309,7 @@ type CustomerQueryLabelResponseDTODdata struct {
 	Labellds string `json:"labellds"`
 }
 
-func NewCustomerQueryLabelRequestDTO() *CustomerQueryLabelResponseDTO {
+func NewCustomerQueryLabelResponseDTO() *CustomerQueryLabelResponseDTO {
 	return &CustomerQueryLabelResponseDTO{}
 }
 
@@ -432,7 +432,7 @@ type CustomerQueryListResponseDTODataPageLastContactTime struct {
 	Type int    `json:"type"`
 }
 
-func NewCustomerQueryListRequestDTO() *CustomerQueryListResponseDTO {
+func NewCustomerQueryListResponseDTO() *CustomerQueryListResponseDTO {
 	return &CustomerQueryListResponseDTO{}
 }
 
@@ -458,7 +458,7 @@ type CustomerFileListResponseDTOData struct {
 	UpdateTime     string `json:"updateTime"`
 }
 
-func NewCustomerFileListRequestDTO() *CustomerFileListResponseDTO {
+func NewCustomerFileListResponseDTO() *CustomerFileListResponseDTO {
 	return &CustomerFileListResponseDTO{}
 }
 
@@ -481,7 +481,7 @@ type CustomerFolderListResponseDTOCata struct {
 	UpdateTime     string `json:"updateTime"`
 }
 
-func NewCustomerFolderListRequestDTO() *CustomerFolderListResponseDTO {
+func NewCustomerFolderListResponseDTO() *CustomerFolderListResponseDTO {
 	return &CustomerFolderListResponseDTO{}
 }
 
@@ -545,7 +545,7 @@ type CustomerQueryExistResponseDTODatalistLastContactTime struct {
 	Type int    `json:"type"`
 }
 
-func NewCustomerQueryExistRequestDTO() *CustomerQueryExistResponseDTO {
+func NewCustomerQueryExistResponseDTO() *CustomerQueryExistResponseDTO {
 	return &CustomerQueryExistResponseDTO{}
 }
 
@@ -619,7 +619,7 @@ type CustomerQueryResponseDTODataCustomerInfoList struct {
 	Step            int                            `json:"step"`
 }
 
-func NewCustomerQueryRequestDTO() *CustomerQueryResponseDTO {
+func NewCustomerQueryResponseDTO() *CustomerQueryResponseDTO {
 	return &CustomerQueryResponseDTO{}
 }
 
@@ -661,7 +661,7 @@ type CustomerPreciseQueryResponseDTOData struct {
 	Step            int                            `json:"step"`
 }
 
-func NewCustomerPreciseQueryRequestDTO() *CustomerPreciseQueryResponseDTO {
+func NewCustomerPreciseQueryResponseDTO() *CustomerPreciseQueryResponseDTO {
 	return &CustomerPreciseQueryResponseDTO{}
 }
 
@@ -744,7 +744,7 @@ type CustomerQueryCustomerResponseDTODataPage struct {
 	MaxPageNo int   `json:"maxPageNo"`
 }
 
-func NewCustomerQueryCustomerRequestDTO() *CustomerQueryCustomerResponseDTO {
+func NewCustomerQueryCustomerResponseDTO() *CustomerQueryCustomerResponseDTO {
 	return &CustomerQueryCustomerResponseDTO{}
 }
 
@@ -762,7 +762,7 @@ type CustomerGetCustomerGroupResponseDTOData struct {
 	GroupName string `json:"groupName"`
 }
 
-func NewCustomerGetCustomerGroupRequestDTO() *CustomerGetCustomerGroupResponseDTO {
+func NewCustomerGetCustomerGroupResponseDTO() *CustomerGetCustomerGroupResponseDTO {
 	return &CustomerGetCustomerGroupResponseDTO{}
 }
 
@@ -784,7 +784,7 @@ type CustomerDelcrmsResponseDTOData struct {
 	Id      string `json:"id"`
 }
 
-func NewCustomerDelcrmsRequestDTO() *CustomerDelcrmsResponseDTO {
+func NewCustomerDelcrmsResponseDTO() *CustomerDelcrmsResponseDTO {
 	return &CustomerDelcrmsResponseDTO{}
 }
 
@@ -828,7 +828,7 @@ type CustomerGetTrajectoryResponseDTODatetrajectoryList struct {
 	UserId          int64  `json:"userId"`
 }
 
-func NewCustomerGetTrajectoryRequestDTO() *CustomerGetTrajectoryResponseDTO {
+func NewCustomerGetTrajectoryResponseDTO() *CustomerGetTrajectoryResponseDTO {
 	return &CustomerGetTrajectoryResponseDTO{}
 }
 
@@ -858,7 +858,7 @@ type CustomerGetCrmVisitDetailsResponseDTOData struct {
 	Latitude    float64 `json:"latitude"`
 }
 
-func NewCustomerGetCrmVisitDetailsRequestDTO() *CustomerGetCrmVisitDetailsResponseDTO {
+func NewCustomerGetCrmVisitDetailsResponseDTO() *CustomerGetCrmVisitDetailsResponseDTO {
 	return &CustomerGetCrmVisitDetailsResponseDTO{}
 }
 
@@ -874,7 +874,7 @@ type CustomerGetChannelSourceResponseDTOData struct {
 	CreateTime int64  `json:"createTime"`
 }
 
-func NewCustomerGetChannelSourceRequestDTO() *CustomerGetChannelSourceResponseDTO {
+func NewCustomerGetChannelSourceResponseDTO() *CustomerGetChannelSourceResponseDTO {
 	return &CustomerGetChannelSourceResponseDTO{}
 }
 
@@ -906,6 +906,6 @@ type CustomerGetCasCadeFieldMappingResponseDTODataFieldParams struct {
 	Sort          int    `json:"sort"`
 }
 
-func NewCustomerGetCasCadeFieldMappingRequestDTO() *CustomerGetCasCadeFieldMappingResponseDTO {
+func NewCustomerGetCasCadeFieldMappingResponseDTO() *CustomerGetCasCadeFieldMappingResponseDTO {
 	return &CustomerGetCasCadeFieldMappingResponseDTO{}
 }
