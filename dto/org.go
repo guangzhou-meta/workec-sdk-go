@@ -85,3 +85,66 @@ func NewOrgUserDeleteResponseDTO() *OrgUserDeleteResponseDTO {
 type OrgUserDeleteResponseData struct {
 	OrgUserDeleteRequestDTO
 }
+
+type OrgUserCreateRequestDTO struct {
+	Name      string `json:"name"`
+	Account   string `json:"account"`
+	Title     string `json:"title"`
+	Email     string `json:"email"`
+	DeptId    int64  `json:"deptId"`
+	OptUserId int64  `json:"optUserId"`
+}
+
+type OrgUserCreateResponseDTO struct {
+	CommonDTO
+	Data *OrgDeptCreateResponseData `json:"data"`
+}
+
+func NewOrgUserCreateResponseDTO() *OrgUserCreateResponseDTO {
+	return &OrgUserCreateResponseDTO{}
+}
+
+type OrgUserCreateResponseData struct {
+	UserId int64 `json:"userId"`
+}
+
+type OrgUserUpdateUserRequestDTO struct {
+	UserId    int64  `json:"userId"`
+	Name      string `json:"name"`
+	Email     string `json:"email"`
+	Title     string `json:"title"`
+	DeptId    int64  `json:"deptId"`
+	OptUserId int64  `json:"optUserId"`
+}
+
+type OrgUserUserOnOffRequestDTO struct {
+	UserId    int64 `json:"userId"`
+	Status    int64 `json:"status"`
+	OptUserId int64 `json:"optUserId"`
+}
+
+type OrgUserFindUserInfoByIdRequestDTO struct {
+	DeptInfo bool   `json:"deptInfo"`
+	UserId   string `json:"userId"`
+	Account  string `json:"account"`
+}
+
+type OrgUserFindUserInfoByIdResponseDTO struct {
+	CommonDTO
+	Data *OrgUserFindUserInfoByIdResponseDTOData `json:"data"`
+}
+type OrgUserFindUserInfoByIdResponseDTOData struct {
+	UserId   int64  `json:"userId"`
+	Mobile   string `json:"mobile"`
+	Email    string `json:"email"`
+	ReMark   string `json:"reMark"`
+	Name     string `json:"name"`
+	Account  string `json:"account"`
+	FaceUrl  string `json:"faceUrl"`
+	DeptId   int64  `json:"deptId"`
+	DeptName string `json:"deptName"`
+}
+
+func NewOrgUserFindUserInfoByIdResponseDTO() *OrgUserFindUserInfoByIdResponseDTO {
+	return &OrgUserFindUserInfoByIdResponseDTO{}
+}

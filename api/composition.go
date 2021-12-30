@@ -59,6 +59,8 @@ func (c *Config) Request(api *common.ApiModel, reqData interface{}, resData inte
 		return c.r.GET(path, data, resData)
 	case common.POST:
 		return c.r.POST(path, reqData, resData)
+	case common.FILE:
+		return c.r.Upload(path, reqData, resData)
 	}
 	return fmt.Errorf("未配置相关服务")
 }

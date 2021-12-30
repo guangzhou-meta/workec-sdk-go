@@ -33,9 +33,37 @@ func (c *Config) OrgStructInfo() (res *dto.OrgStructInfoResponseDTO, err error) 
 	return
 }
 
+// OrgUserCreate 创建员工
+func (c *Config) OrgUserCreate(reqData *dto.OrgUserCreateRequestDTO) (res *dto.OrgUserCreateResponseDTO, err error) {
+	res = dto.NewOrgUserCreateResponseDTO()
+	err = c.RequestByAutoResolve(common.OrgUserCreate, reqData, res)
+	return
+}
+
+// OrgUserUpdateUser 修改员工
+func (c *Config) OrgUserUpdateUser(reqData *dto.OrgUserUpdateUserRequestDTO) (res *dto.CommonDTO, err error) {
+	res = dto.NewCommonDTO()
+	err = c.RequestByAutoResolve(common.OrgUserUpdateUser, reqData, res)
+	return
+}
+
 // OrgUserDelete 删除员工
 func (c *Config) OrgUserDelete(reqData *dto.OrgUserDeleteRequestDTO) (res *dto.OrgUserDeleteResponseDTO, err error) {
 	res = dto.NewOrgUserDeleteResponseDTO()
 	err = c.RequestByAutoResolve(common.OrgUserDelete, reqData, res)
+	return
+}
+
+// OrgUserUserOnOff 启用或禁用员工
+func (c *Config) OrgUserUserOnOff(reqData *dto.OrgUserUserOnOffRequestDTO) (res *dto.CommonDTO, err error) {
+	res = dto.NewCommonDTO()
+	err = c.RequestByAutoResolve(common.OrgUserOnOff, reqData, res)
+	return
+}
+
+// OrgUserFindUserInfoById 组织架构 - 获取指定员工信息
+func (c *Config) OrgUserFindUserInfoById(reqData *dto.OrgUserFindUserInfoByIdRequestDTO) (res *dto.OrgUserFindUserInfoByIdResponseDTO, err error) {
+	res = dto.NewOrgUserFindUserInfoByIdResponseDTO()
+	err = c.RequestByAutoResolve(common.OrgUserFindUserInfoById, reqData, res)
 	return
 }

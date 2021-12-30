@@ -103,10 +103,10 @@ func (r *RoleChangePrivilegesRequestSimpleDTO) Assign(src *RoleChangePrivilegesR
 }
 
 type RoleChangeUsersRequestDTO struct {
-	UserId     int64                           `json:"userId"`
-	RoleId     int64                           `json:"roleId"`
-	ModifyType common.RoleChangeUserModifyType `json:"modifyType"`
-	UserIds    []int64                         `json:"userIds"`
+	UserId     int64                            `json:"userId"`
+	RoleId     int64                            `json:"roleId"`
+	ModifyType *common.RoleChangeUserModifyType `json:"modifyType"`
+	UserIds    []int64                          `json:"userIds"`
 }
 
 type RoleChangeUsersRequestSimpleDTO struct {
@@ -127,7 +127,7 @@ func (r *RoleChangeUsersRequestSimpleDTO) Assign(src *RoleChangeUsersRequestDTO)
 	r.UserId = src.UserId
 	r.RoleId = src.RoleId
 	r.UserIds = src.UserIds
-	r.ModifyType = int(src.ModifyType)
+	r.ModifyType = int(*src.ModifyType)
 	return r, nil
 }
 
