@@ -4,9 +4,12 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/guangzhou-meta/workec-sdk-go/common"
 	"net/http"
 	"net/url"
+)
+
+import (
+	"github.com/guangzhou-meta/workec-sdk-go/common"
 )
 
 type Request struct {

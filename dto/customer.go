@@ -1,8 +1,11 @@
 package dto
 
 import (
-	"github.com/guangzhou-meta/workec-sdk-go/common"
 	"os"
+)
+
+import (
+	"github.com/guangzhou-meta/workec-sdk-go/common"
 )
 
 type CustomerAddCustomerRequestDTO struct {
